@@ -15,7 +15,7 @@ var playerY;
 var playerVelocity = -1;
 var playerDisabled = false;
 
-
+var currentVerticalID;
 var barrelMovementID;
 var playerVerticalID;
 var timeKeeperID;
