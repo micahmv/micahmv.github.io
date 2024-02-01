@@ -36,7 +36,7 @@ PS.init = function( system, options ) {
 
 	// PS.debug( "PS.init() called\n" );
 
-	PS.gridSize( dimension - 1, dimension + 1 );
+	PS.gridSize( dimension - 1, dimension + 3 ); // added 2 rows for update/dev3
 
 	PS.color(PS.ALL, PS.ALL, PS.COLOR_BLACK);
 	PS.border(PS.ALL, PS.ALL, 0);
@@ -53,7 +53,13 @@ PS.init = function( system, options ) {
 	}
 
 	// Barrel start
-	PS.color( barrelX, barrelY, PS.COLOR_ORANGE );
+	for( let x = barrelX; x < barrelX + 3; x++ ){
+		for (let y = barrelY; y < barrelY + 3; y++ ){
+			PS.color( x, y, PS.COLOR_ORANGE );
+		}
+	}
+	PS.color( barrelX + 1, barrelY + 1, PS.COLOR_RED );
+
 	inBarrel = true;
 
 	// start perFrame
@@ -99,9 +105,10 @@ PS.keyUp = function( key, shift, ctrl, options ) {
 	if(key == PS.KEY_SPACE && !playerDisabled){
 		if(inBarrel){
 			inBarrel = false;
-			playerX = barrelX;
+			playerX = barrelX + 1;
 			playerY = barrelY - 1;
 			PS.color( playerX, playerY, PS.COLOR_RED );
+			PS.color( barrelX + 1, barrelY + 1, PS.COLOR_ORANGE );
 
 			if(tutorial)
 				PS.statusText( "ARROW KEYS TO MOVE" );
@@ -114,32 +121,49 @@ function barrelMovement(){
 	if(barrelX == 1){
 		barrelDir = 1;
 	}
-	if(barrelX == dimension - 3){
+	if(barrelX == dimension - 5){
 		barrelDir = -1;
 	}
 
-	PS.color( barrelX, barrelY, PS.COLOR_BLACK);
+	for( let x = barrelX; x < barrelX + 3; x++ ){
+		for (let y = barrelY; y < barrelY + 3; y++ ){
+			PS.color( x, y, PS.COLOR_BLACK );
+		}
+	}
+
 	barrelX += barrelDir;
-	PS.color( barrelX, barrelY, PS.COLOR_ORANGE );
+
+	for( let x = barrelX; x < barrelX + 3; x++ ){
+		for (let y = barrelY; y < barrelY + 3; y++ ){
+			PS.color( x, y, PS.COLOR_ORANGE );
+		}
+	}
+	if(inBarrel)
+		PS.color( barrelX + 1, barrelY + 1, PS.COLOR_RED );
 
 	checkEnterBarrel();
 }
 
 function checkEnterBarrel(){
 	// enter back into barrel
-	if(playerX == barrelX && playerY == barrelY){
-		inBarrel = true;
-		playerVelocity = -1;
-
-		if(tutorial){
-			PS.statusText("COLLECT");
-			tutorial = false;
+	for( let x = barrelX; x < barrelX + 3; x++ ){
+		for (let y = barrelY; y < barrelY + 3; y++ ){
+			if(playerX == x && playerY == y){
+				inBarrel = true;
+				playerVelocity = -1;
+		
+				if(tutorial){
+					PS.statusText("COLLECT");
+					tutorial = false;
+				}
+				break;
+			}
 		}
 	}
 }
 
 function checkDeath(){
-	if(playerY > dimension){
+	if(playerY > dimension + 2){
 		PS.statusText("GAME OVER, REFRESH TO PLAY AGAIN");
 		
 		PS.timerStop( barrelMovementID );
