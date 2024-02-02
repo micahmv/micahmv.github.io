@@ -1,0 +1,25 @@
+body {
+    color:#b4b6b6;
+    background-color: black;
+
+    font-family: source-code-pro;
+    font-weight: 400;
+}
+
+a {
+    font-family: source-code-pro;
+    font-weight: 400;
+    color:#219880;
+}
+a:hover {
+    color: #82cd68;
+}
+
+h1 {
+    color:#219880;
+    font-size: larger;
+}
+
+.linked-apps {
+    text-align: right;
+}
