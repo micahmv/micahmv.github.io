@@ -4,6 +4,7 @@ body {
 
     font-family: source-code-pro;
     font-weight: 400;
+    font-size: larger;
 }
 
 a {
@@ -17,7 +18,7 @@ a:hover {
 
 h1 {
     color:#219880;
-    font-size: larger;
+    font-size: xx-large;
 }
 
 .linked-apps {
