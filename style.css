@@ -11,9 +11,11 @@ a {
     font-family: source-code-pro;
     font-weight: 400;
     color:#219880;
+    outline: none;
 }
 a:hover {
     color: #82cd68;
+    outline: none;
 }
 
 h1 {
