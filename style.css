@@ -5,6 +5,9 @@ body {
     font-family: source-code-pro;
     font-weight: 400;
     font-size: larger;
+
+    max-width:800px;
+    margin:25px auto;
 }
 
 a {
@@ -25,4 +28,10 @@ h1 {
 
 .linked-apps {
     text-align: right;
+}
+
+header, #content, footer { 
+    background: rgba(0,0,0,.8); 
+    padding:25px;
+    color:#FFFFFF; 
 }
