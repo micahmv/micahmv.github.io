@@ -1,4 +1,35 @@
-body {
+:root{
+    --background:black;
+    --background-brown:#1C0F13;
+    --background-card:#0f4238;
+    --text:#b4b6b6;
+    --link:#219880;
+    --link-hover:#82cd68;
+}
+
+header { 
+    background: rgba(0,0,0,.8); 
+    color:#FFFFFF; 
+}
+
+.left-div {
+    float: left;
+}
+
+.right-div {
+    float: right;
+    margin-top: 40px;
+}
+
+.clear {
+    clear: both;
+}
+
+.linked-apps {
+    text-align: right;
+}
+
+navbar {
     color:#b4b6b6;
     background-color: black;
 
@@ -21,17 +52,64 @@ a:hover {
     outline: none;
 }
 
+body {
+    color:#b4b6b6;
+    background-color: black;
+
+    font-family: source-code-pro;
+    font-weight: 400;
+    font-size: larger;
+
+    max-width:800px;
+    margin:25px auto;
+}
+
 h1 {
     color:#219880;
     font-size: xx-large;
+    margin-bottom: 0;
 }
 
-.linked-apps {
-    text-align: right;
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-header, #content, footer { 
-    background: rgba(0,0,0,.8); 
-    padding:25px;
-    color:#FFFFFF; 
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cards {
+    text-align: center;
+    display: flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.cards .card {
+    width: 356px;
+    padding: 40px 20px 32px 20px;
+    margin: 4px 4px 10px 4px;
+    background-color: var(--background);
+    border: 4px solid var(--link);
+    font-size: 16pt;
+    flex: 1 1 300px;
+}
+.cards .card h3 {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.cards .card .banner {
+    width:300px;
+    height:150px;
+}
+
+.cards .card a img {
+    background-color: var(--link-hover);
+    padding: 4px 4px 4px 4px;
+    margin: 4px 4px 4px 4px;
+    max-height:100%;
+    max-width:100%;
+    /* use 300x150 images */
 }

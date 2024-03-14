@@ -1,0 +1,79 @@
+WildeKey
+
+Project: Game Development
+Development Engine: Unity
+Development Environment: Unity, Visual Studio
+Programming Language: C#
+Other Tools: Aseprite
+Team Size: 3
+Role: Lead Programmer and Designer
+Duration: 9 months
+
+ABOUT
+
+WildeKey is a 2D educational game hosted on the web created with the design goal to make learning to type fun. 
+Players go world to world, unlocking more of the keyboard to practice as they move across levels.
+Levels comprise of two types, wave based typing in lanes and boss fights.
+In the first, waves of creatures appear for the player to save by typing their displayed text while switching between lanes.
+Against bosses, players instead take a more formal word per minute test where they use the unlocked portion of the keyboard and type out a paragraph to defeat the boss.
+Assuming the role of a wildebeest wizard, the player progresses through color-saturated cartooney environments engaging a wide range of creatures perfect for elementary school students.
+
+Created to integrate into Sandy Spring Friends School cirriculum, our team composing of two developers and one mentor worked on this project for 9 months.
+Our project had an emphasis on implementing a strong development plan, using story-boarding and a Gantt Chart.
+My role in this project was as a:
+- designer, coming up with the initial idea when reflecting on how boring learning to type was when I was a child.
+- artist, drawing all the games creatures, bosses, world-map tiles, and backgrounds. 
+- programmer, creating all scripts and systems for a world map, typing in the lane-based and paragraph based approaches, and using scriptable objects to make creatures a datatype.
+
+ITCH.IO INCLUDE
+
+
+
+Rodent Rampage
+
+Project: Game Development
+Development Engine: Unity
+Development Environment: Unity, Visual Studio
+Programming Language: C#
+Other Tools: PlasticSCM, F-MOD
+Team Size: 5
+Role: Programmer
+Duration: 3 months
+
+DOWNLOAD ON THE APPSTORE INCLUDE
+GET IT ON GOOGLEPLAY INCLUDE
+
+ABOUT
+
+Rodent Rampage is an endless runner IOS/Android game created as a part of MassDigi's Summer Innovation Program.
+Through MassDigi's DigiStudio program, I was brought on to join a team of 5 in developing an update for the mobile game.
+Our team was given creative freedom to polish the existing game and expand upon its core systems.
+
+Adding Power-Ups
+
+During the games creation, I added two new major power-ups to the existing pool of __. 
+Unlike the rest of the games more passive power-ups, these two changed the players control scheme.
+The first, puts the player in a superman pose jetting them forward at the highest speed while the player can angle up or down to move along the y-axis.
+The second, has the player take hold of a bird with them needing to tap the screen constantly in a flappy bird fashion.
+
+Polishing Physics and Flying Visuals
+
+The player characters physics control felt floaty and things like the hangtime when starting to fall were taking to long.
+I went into the character controller and tweaked as to make the feeling of control fun in of itself.
+As well, several visuals were queueing at times that felt off. I reworked these particle effects to be more in line with the feeling of using a leafblower to fly.
+
+
+
+Sharkbyte
+
+Project: Engine Development, Game Development
+Development Engine: Dragonfly
+Development Environment: Visual Studio 2022
+Programming Language: C++
+Other Tools: SFML, Github
+Team Size: 2
+Role: Programmer
+Duration: 7 weeks
+
+ABOUT
+

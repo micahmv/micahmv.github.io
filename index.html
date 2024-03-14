@@ -4,47 +4,39 @@
 		<title>MICAH VARGAS</title>
 		<meta name = "type" content = "website"/>
 		<link rel="stylesheet" href="style.css">
-
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap')
 		</style>
 	</head>
-
 	<body>
 		<div class="header">
-			<h1>MICAH MATEO VARGAS</h1>
-			<h3>Game Developer</h3>
-			
-			<div class="linked-apps">
-			<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
-				<img src="assets/linkedin-logo.png" alt width="40" height="40" title="LinkedIn Profile">
-			</a>
-			<a href="https://h4c1m.itch.io/" target="_new">
-				<img src="assets/itch-logo.svg" alt width="40" height="40" title="Itch Profile">
-			</a>
-			<a href="https://h4c1m.itch.io/" target="_new">
-				<img src="assets/pdf-icon.jpg" alt width="40" height="40" title="Resume PDF">
-			</a>
+			<div class="left-div">
+				<h1>MICAH MATEO VARGAS</h1>
+				<h3>Game Developer</h3>
 			</div>
-
-			<hr>
-
-			<div class="navbar">
-				<a href="index.html">HOME</a>
-				<a href="index.html">PORTFOLIO</a>
-				<a href="index.html">ABOUT</a>
-				<a href="index.html">RESUME</a>
+			<div class="right-div">
+				<div class="linked-apps">
+					<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+						<img src="assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+					</a>
+					<a href="https://h4c1m.itch.io/" target="_new">
+						<img src="assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+					</a>
+					<a href="resume.pdf" target="_new">
+						<img src="assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+					</a>
+				</div>
 			</div>
-
-
+			<div class="clear"></div>
 		</div>
-
-
-
-		<br>
-
-
-
+		<div class="navbar">
+			<hr>
+			<a href="index.html">HOME</a>
+			<a href="portfolio.html">PORTFOLIO</a>
+			<a href="about.html">ABOUT</a>
+			<a href="resume.pdf">RESUME</a>
+			<hr>
+		</div>
 		<div class="main">
 			<h3>Hello and welcome to my website!</h3>
 			<p>I'm Micah Vargas, or sometimes H4C1M. 
@@ -53,31 +45,23 @@
 				You'll find a record of the games I've worked on in personal and professional capacities through this handmade website.
 				Feel free to browse and click for further details on any project!
 			</p>
+			<h3>See featured games below:</h3>
 		</div>
-
-		<br>
-
-		<h3>IMGD2900 Digital Game Design</h3>
-		
-		<p>
-			<a href="resources/Dev0/game.html" target="_blank">Dev 0: Example project</a>
-			<br>
-			<a href="resources/Dev1/game.html" target="_blank">Dev 1: COLLECT "Toy"</a>
-			<br>
-			<a href="https://forms.gle/bcdcjJR8gWUeuLUv8">Dev 2: COLLECT Playtest Form</a>
-			<br>
-			<a href="resources/Dev3/game.html" target="_blank">Dev 3: COLLECT "Toy" Easy Mode</a>
-			<br>
-			<a href="resources/Dev4/game.html" target="_blank">Dev 4: SOLVE "Puzzle"</a>
-			<br>
-			<a href="https://forms.gle/GkTNTTJFD8v2dVv89">Dev 5: SOLVE Playtest Form</a>
-			<br>
-			<a href="resources/Dev6/game.html" target="_blank">Dev 6: SOLVE "Puzzle" v2</a>
-			<br>
-			<a href="resources/Dev7/game.html" target="_blank">Dev 7: Steal Dragons Flame</a>
-			<br>
-			<a href="https://forms.gle/kmgvdd6iq21rd7PA8">Dev 8: Steal Flame Playtest Form</a>
-		</p>
-		
+		<div class="cards">
+			<div class="card">
+				<a href="portfolio/WildeKey.html">
+					<img class="icon" src="assets/banner_wk.png">
+					<h3>WildeKey</h3>
+				</a>
+				<p>Created an educational game to learn typing for Sandy Spring Friends School to integrate into cirriculum.</p>
+			</div>
+			<div class="card">
+				<a href="portfolio/RodentRampage.html">
+					<img class="icon" src="assets/banner_rr.jpeg">
+					<h3>Rodent Rampage</h3>
+				</a>
+				<p>Continued development on a published endless runner mobile game for the Massachussetts Digital Games Institute.</p>
+			</div>
+		</div>
 	</body>
 </html>
