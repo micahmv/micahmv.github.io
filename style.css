@@ -33,8 +33,6 @@ navbar {
     color:#b4b6b6;
     background-color: black;
 
-    font-family: source-code-pro;
-    font-weight: 400;
     font-size: larger;
 
     max-width:800px;
@@ -42,8 +40,6 @@ navbar {
 }
 
 a {
-    font-family: source-code-pro;
-    font-weight: 400;
     color:#219880;
     outline: none;
 }
@@ -60,7 +56,7 @@ body {
     font-weight: 400;
     font-size: larger;
 
-    max-width:800px;
+    max-width:900px;
     margin:25px auto;
 }
 
@@ -81,29 +77,32 @@ p {
 }
 
 .cards {
+    /* uncomment below to have boxes shorten for image size */
+    /* align-items: center; */
     text-align: center;
     display: flex;
     flex-wrap:wrap;
-    gap:20px;
+    gap:15px;
+    margin-top: 5px;
 }
 .cards .card {
-    /* padding: 40px 40px 20px 30px; */
-    padding: 0px 8px 0px 0px;
-    /* margin: 4px 4px 10px 4px; */
-    background-color: var(--background);
-    border: 4px solid var(--link);
-    font-size: 16pt;
-    flex: 1 1 300px;
+    border: 4px solid var(--link); /* box around all content */
+    flex: 300px;
 }
-.cards .card h3 {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+.cards .card .offsetHandler {
+    /* created so card text doesn't get forced into same padding */
+    padding: 0px 8px 0px 0px; /* offset from border */
 }
-
 .cards .card a img {
     background-color: var(--link-hover);
-    padding: 4px 4px 4px 4px; 
-    /* margin: 4px 4px 4px 4px; */
+    padding: 4px 4px 4px 4px;  /* border */
     max-height:100%; 
     max-width:100%;
+}
+.cards .card h3 {
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+}
+.cards .card p {
+    margin: 0px 10px 10px 10px;
 }
