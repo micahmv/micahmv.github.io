@@ -28,6 +28,9 @@ header {
 .linked-apps {
     text-align: right;
 }
+.linked-apps a {
+    text-decoration: none;
+}
 
 navbar {
     color:#b4b6b6;
@@ -104,5 +107,5 @@ p {
     margin-bottom: 0.2em;
 }
 .cards .card p {
-    margin: 0px 10px 10px 10px;
+    margin: 0px 10px 0.8em 10px;
 }
