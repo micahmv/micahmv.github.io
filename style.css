@@ -27,9 +27,13 @@ header {
 
 .linked-apps {
     text-align: right;
+    opacity: 100%;
 }
 .linked-apps a {
     text-decoration: none;
+}
+.linked-apps img:hover {
+    opacity: 80%;
 }
 
 navbar {
@@ -108,6 +112,7 @@ p {
     padding: 4px 4px 4px 4px;  /* border */
     max-height:100%; 
     max-width:100%;
+    opacity: 100%;
 }
 .cards .card img:hover {
     opacity: 80%;
