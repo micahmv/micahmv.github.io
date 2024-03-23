@@ -78,10 +78,50 @@
 		</div>
 		<h3>ABOUT</h3>
 		<p>
-			
+			Perlenspiel defines itself as a "gameclavier, a software instrument for studying and composing digital games".
+			By limiting itself to a maximum grid of 32x32 colored squares, the intention is to promote the creation of quick complete games.
+			Coded in JavaScript, I created three different projects with three different goals.
+			<br><br>
+			All these games can be played online, click the images above or use: <a href="">Mazes</a>, <a href="">Wizard VS Dragons</a>, or <a href="">Collectathon</a>.
+		</p>
+
+		<h3>Maze Generation</h3>
+		<p>
+			The most technical of the three projects was a maze procedural generation project. 
+			By navigating to the green goal as the red square, the player proceeds to the next "level" or screen.
+			Each screen is a freshly generated square maze, starting at 7x7 and going up to 32x32. See 4 example mazes below:
 		</p>
         <div class="screenshots">
 			
+		</div>
+		<p>
+			These mazes were generated using Primm's Algorithm. 
+			I chose to do my custom implementation using specifically this algorithm for two major reasons.
+			Firstly, Primm's Algorithm has a tendency to produce long halways with many sprouting dead-ends.
+			Secondly, it produces a maze where all traversable nodes are connected (meaning there's no disconnected areas).
+		</p>
+
+		<h3>Wizard VS Twin Dragons</h3>
+		<p>
+			The most creative of the projects was a metaphor game.
+			A more traditional game with the simple objective of making the player feel like a wizard in aerial combat with dragons.
+			On the creative side, I made a simple system for the player to teleport between clouds, summon a portal, and collect fireballs with it.
+			Working within the confines of colored cells with perlenspiel, I had to create a custom implementation for the sprites and animations I was using.
+			As I've had experience with engine development (see <a href="./Sharkbyte.html">Sharkbyte</a>), implementing these features was familiar.
+		</p>
+		<div class="screenshots">
+			
+		</div>
+
+		<h3>Collectathon</h3>
+		<p>
+			The first game I created was a hyper-casual arcade-style collecting game.
+			The player can launch upwards out of a orange box, collecting yellow squares along the way, before having to land back into the launcher.
+			This game was created to "de-make" (or simplify to it's base mechanic) the Donkey-Kong banna collecting barrel minigames and to learn perlenspiel.
+			For this game, I created two versions a truly simplified version where the launcher was only a single square and an easy mode with a more forgivingly sized launcher to land back into.
+		</p>
+		<div class="screenshots">
+
 		</div>
 	</body>
 </html>

@@ -66,7 +66,7 @@
 			</div>
             <div class="col">
                 <a href="https://play.google.com/store/apps/details?id=com.MassDiGI.TeamCaramelApple">
-                    <img class="icon" src="">
+                    <img class="icon" src="../assets/googleplay.png">
                 </a>
 				<a href="https://apps.apple.com/us/app/rodent-rampage/id6450372936">
                     <img class="icon" src="../assets/appstore.png">
@@ -75,10 +75,41 @@
 		</div>
 		<h3>ABOUT</h3>
 		<div class="screenshots">
-
+			<img class="icon" src="../assets/ss_rr1.png">
+			<img class="icon" src="../assets/ss_rr2.png">
 		</div>
 		<p>
-
+			Rodent Rampage is a 2D endless runner game for iOS and Android developed by a team during MassDigi's Summer Innovation Program.
+			<br><br>
+			Through MassDigi's DigiStudio program, I joined a team of designers, programmers, and artists to continue development of the published game.
+			Our team was given the opportunity to self-select features to implement and polish as a content update for the title.
+			Some smaller additions included adding the game's animated cinematic to the title screen and designing and adding new chunks for the procedural generation system.
+			The larger changes made are detailed below:
+		</p>
+		<h3>New Power-Ups</h3>
+		<p>
+			Rodent Rampage contains an assortment of power-ups ranging from a shield to protect the player to a golden acorn to increase the value of collected currency.
+			Among all the in-game power-ups however, none had any change in the method of control of the player.
+			The original team's inspiration was Jetpack Joyride and so I looked to the same game for inspiration.
+			I sought to bring in some of the "higher-order" power-ups from Jetpack Joyride which changed the players controls for gameplay variety (eg the dragon Mr Cuddles where you hold down to descend).
+			While designing, one limitation for new additions was the reuse of in-game assets as we lacked an artist who could reproduce the original artist's style.
+			Both the power-ups described below are still in development and will be added to the game at the end of DigiStudio on May 7, 2024.
+			<br><br>
+			Given the context of Rodent Rampage, playing as a squirrel with a leafblower I started development on one simple control altering power-up.
+			For context, the base method of control in Rodent Rampage is tapping/holding the screen to ascend and letting go to descend with the character automatically and constantly moving forward.
+			<br><br>
+			The first new power-up I created, puts the squirrel in a "super-man" pose with on hand outstretched had the player moving significantly faster for a limited period.
+			The players controls shift to allow them to tap the top half of the screen to move up and the bottom to move down as they rocket forward trying to collect acorns along the way.
+			<br><br>
+			The second new power-up I added, instead has the squirrel grabbing onto a bird (which can also be seen as an enemy in the suburbs area of the game).
+			The player continues at their normal pace, however their control is switched to tap the screen to beat the birds wings and flap into the air.
+		</p>
+		<h3>Polishing Game Feel</h3>
+		<p>
+			Through playtesting, I noticed many complaining about the hang-time of the player character when ending the ascent and beginning to descend. 
+			I worked the game's physics system as to remedy this and allow for a snappier experience.
+			As well, many felt that they died deaths that were unfair. I looked into the issue and ended up changing the player character's hitbox to include only the squirrel.
+			Finally, the leafblowers visual and particle effects timing's felt slightly off so I tweaked their values to be more intune with expectations.
 		</p>
 	</body>
 </html>

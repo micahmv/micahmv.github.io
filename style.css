@@ -81,6 +81,11 @@ p {
     margin-bottom: 10px;
 }
 
+.smp {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .cards {
     /* uncomment below to have boxes shorten for image size */
     /* align-items: center; */
