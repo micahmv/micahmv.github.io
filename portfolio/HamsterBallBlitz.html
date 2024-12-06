@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MICAH VARGAS</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="../style.css">
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
+	</head>
+	<body>
+		<div class="header">
+				<div class="left-div">
+					<h1>MICAH MATEO VARGAS</h1>
+					<h3>Game Developer</h3>
+				</div>
+				<div class="right-div">
+					<div class="linked-apps">
+						<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+							<img src="../assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+						</a>
+						<a href="https://h4c1m.itch.io/" target="_new">
+							<img src="../assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+						</a>
+						<a href="mailto:micahvargas@icloud.com" target="_new">
+							<img src="../assets/mail-icon.png" alt width="40" height="40" title="Mail">
+						</a>
+						<a href="../resume.pdf" target="_new">
+							<img src="../assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<a href="../index.html">HOME</a>
+			<a href="../portfolio.html">PORTFOLIO</a>
+			<a href="../archive.html">ARCHIVE</a>
+			<a href="../about.html">ABOUT</a>
+			<a href="../resume.pdf">RESUME</a>
+			<hr>
+		</div>
+
+		<h3>INFO</h3>
+		<div class="columns">
+			<div class="col">
+				<p> Project Type:<br>
+				Development Engine:<br>
+				Programming Language:<br>
+				Other Tools:<br>
+				Team Size:<br>
+				Role:<br>
+				Duration:<br></p>
+			</div>
+			<div class="col">
+				<p>Post-Launch Update<br>
+				Unity<br>
+				C#<br>
+				PlasticSCM, F-MOD<br>
+				7<br>
+				Programmer<br>
+				3 months<br></p>
+			</div>
+			<div class="col">
+                <img class="icon" src="../assets/hbb_logo.png" style="opacity: 100%; width: 80%; height: auto; padding-left: 25px;">
+			</div>
+            <div class="col">
+                <a href="https://play.google.com/store/apps/details?id=com.MassDiGI.Leaf">
+                    <img class="icon" src="../assets/googleplay.png">
+                </a>
+				<a href="https://apps.apple.com/us/app/hamster-ball-blitz/id6504194684">
+                    <img class="icon" src="../assets/appstore.png">
+                </a>
+            </div>
+		</div>
+		<h3>ABOUT</h3>
+		<div class="screenshots">
+			<img class="icon magnifiable" src="../assets/ss_hbb1.png">
+			<img class="icon magnifiable" src="../assets/ss_hbb2.png">
+		</div>
+		<p>
+			Hamster Ball Blitz is a 2D top-down physics-driven game for iOS and Android where you play as a hamster competing in a tournament with the goal to knock every opponent offstage.
+			<br><br>
+			Through MassDigi's DigiStudio internship, I joined a team of designers, programmers, and artists to continue development of the published game.
+			Our team was given the opportunity to self-select features to implement and polish as a content update for the title.
+		</p>
+		<br>
+		<h3>Adding matches with 2 opponents</h3>
+		<p>
+			With the games internal structure, we noted that adding multiple opponents would be within scope for features to be completed.
+			Thus, we worked on adding functionality for 1v2 matches where the player fights 2 opponents at once.
+			To do this we modified gameplay scripts relevant to the win condition and added UI viusals for the second hamster opponent.
+			With the 1v2 completely playable, we made every second match of every tournamnet a 1v2.
+		</p>
+		<br>
+		<h3>Artifact Room</h3>
+		<div class="columns">
+			<div class="colx2">
+				<p>As the player completes the games tournaments they are rewarded with 'artifacts'. 
+					These items serve as power-ups for the player each with special effects.
+					Our team designated providing players a way to see their collected artifacts and understand their effects as a priority based on our playtesting.
+					With this goal in mind, I went about creating this feature which I dubbed the 'Artifact Room'.
+					Using the ScriptableObject structure for artifacts (including name, description, and image among other attributes), I loaded relevant data into a prefab and then displayed in a grid using Unity's Grid Layout Group component.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_hbb_ar.png">
+			</div>
+		</div>
+		<br>
+		<h3>Creating Tools for Designers</h3>
+		<p>
+			Each time the player completes a match they're rewarded with the choice of an upgrade of 1 of 3 stats.
+			Those being: speed, mass, and ability.
+			In our design review and playtesting, our designers found that while mass provided a massive advantage it's drawback was lacking.
+			Mass minimizes incoming knockback and allows to push enemies further, such a stats main disadvantage would obviously be speed and acceleration.
+			By getting larger, you become slower.
+			<br><br>
+			I went about making a tool to allow designers to modify the relationship between mass and applied acceleration per frame.
+			Using Unity's AnimationCurve I created a Mass-Acceleration Curve where the mass stat represented the x-value and the applied acceleration scale was the y-value.
+			By using an AnimationCurve, the graph is visualized and modifiable in a design-friendly GUI allowing to change points and the type of curve (exponential, quadratic, logarithmic, etc). 
+		</p>
+		<br><br><br>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MICAH VARGAS</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="../style.css">
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
+	</head>
+	<body>
+		<div class="header">
+				<div class="left-div">
+					<h1>MICAH MATEO VARGAS</h1>
+					<h3>Game Developer</h3>
+				</div>
+				<div class="right-div">
+					<div class="linked-apps">
+						<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+							<img src="../assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+						</a>
+						<a href="https://h4c1m.itch.io/" target="_new">
+							<img src="../assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+						</a>
+						<a href="mailto:micahvargas@icloud.com" target="_new">
+							<img src="../assets/mail-icon.png" alt width="40" height="40" title="Mail">
+						</a>
+						<a href="../resume.pdf" target="_new">
+							<img src="../assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<a href="../index.html">HOME</a>
+			<a href="../portfolio.html">PORTFOLIO</a>
+			<a href="../archive.html">ARCHIVE</a>
+			<a href="../about.html">ABOUT</a>
+			<a href="../resume.pdf">RESUME</a>
+			<hr>
+		</div>
+
+		<h3>INFO</h3>
+		<div class="columns">
+			<div class="col">
+				<p> Project Type:<br>
+				Development Engine:<br>
+				Programming Language:<br>
+				Other Tools:<br>
+				Team Size:<br>
+				Role:<br>
+				Duration:<br></p>
+			</div>
+			<div class="col">
+				<p>Game Development<br>
+				Unity<br>
+				C#<br>
+				<br>
+				1<br>
+				Programmer<br>
+				24 hours<br></p>
+			</div>
+			<div class="col">
+				<iframe frameborder="0" src="https://itch.io/embed/2671089?dark=true" width="504" height="167"><a href="https://h4c1m.itch.io/screenbreaker">Dodge Veer Dash by H4C1M</a></iframe>			</div>
+		</div>
+		<br>
+		<h3>ABOUT</h3>
+		<p>
+			In Dodge Veer Dash you assume the role of a platformer character able to run around, wall-jump, and pick up disks.
+			Using disks, the player is able to dash in any direction.
+			The goal is to avoid the bouncing DVD logo or to slam it into the corners using dash (with enough skill). 
+			This game was made in 24 non-consecutive hours as part of a game jam.
+		</p>
+		<br>
+		<h3>Creating a Modern 2D Platformer Controller</h3>
+		<p>
+			A big part of this project was creating a modern platformer character.
+			To do this, I adjusted gravity when at the apex of the jump to make it more responsive.
+			I also supported variable jump heights based on how long the button is held.
+			Using the same system for regular jumping, I created wall jumps as well.
+		</p>
+		<br>
+		<h3>Squash & Stretch</h3>
+		<p>
+			The character is a single sprite and doesn't include any animations.
+			However, by using squash & stretch to scale the size of the image on certain actions the character feels alive.
+		</p>
+		<br>
+		<h3>Particle Effects</h3>
+		<p>
+			The character has two major particle effects, one for jumping up where the particles charge into the player and the other on landing where those particles release into the ground.
+			These two particle effects instantly increased the juice of the game.
+		</p>
+		<br>
+		<h3>Remaking the bouncing DVD logo</h3>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					As the game centers around the DVD logo, I had to make it work as it does typically.
+					This includes bouncing off walls properly, hitting the corners, and changing colors each collision.
+					I also added support for redirecting the DVD logo when slamming into it with the dash.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/banner_dvd.gif">
+			</div>
+		</div>
+		<br>
+		<h3>Creating gameplay borders from the viewport size</h3>
+		<p>
+			Since the game uses the camera's bounds as the playspace, I decided to dynamically create the gameplay hitbox that controls the games bounds.
+			I programmatically create an EdgeCollider with 4 points from the camera viewport's dimensions, allowing this game to be played in any aspect ratio.
+		</p>
+	</body>
+</html>

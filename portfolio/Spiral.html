@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MICAH VARGAS</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="../style.css">
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
+	</head>
+	<body>
+		<div class="header">
+				<div class="left-div">
+					<h1>MICAH MATEO VARGAS</h1>
+					<h3>Game Developer</h3>
+				</div>
+				<div class="right-div">
+					<div class="linked-apps">
+						<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+							<img src="../assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+						</a>
+						<a href="https://h4c1m.itch.io/" target="_new">
+							<img src="../assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+						</a>
+						<a href="mailto:micahvargas@icloud.com" target="_new">
+							<img src="../assets/mail-icon.png" alt width="40" height="40" title="Mail">
+						</a>
+						<a href="../resume.pdf" target="_new">
+							<img src="../assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<a href="../index.html">HOME</a>
+			<a href="../portfolio.html">PORTFOLIO</a>
+			<a href="../archive.html">ARCHIVE</a>
+			<a href="../about.html">ABOUT</a>
+			<a href="../resume.pdf">RESUME</a>
+			<hr>
+		</div>
+
+		<h3>INFO</h3>
+		<div class="columns">
+			<div class="col">
+				<p> Project Type:<br>
+				Development Engine:<br>
+				Programming Language:<br>
+				Other Tools:<br>
+				Team Size:<br>
+				Role:<br>
+				Duration:<br></p>
+			</div>
+			<div class="col">
+				<p>Game Development<br>
+				Unity<br>
+				C#<br>
+				Github<br>
+				5<br>
+				Developer<br>
+				6 months<br></p>
+			</div>
+			<div class="col">
+				<iframe frameborder="0" src="https://itch.io/embed/3067632?dark=true" width="504" height="167"><a href="https://spiral-dev-team.itch.io/project-spiral">Project Spiral by Spiral Dev Team, SpencerDill232, H4C1M, Jay Iggy, EggSucker888</a></iframe>
+			</div>
+		</div>
+		<h3>ABOUT</h3>
+		<div class="screenshots">
+			<img class="icon magnifiable" src="../assets/ss_spiral2.png">
+			<img class="icon magnifiable" src="../assets/ss_spiral3.png">
+		</div>
+		<p>
+			Project Spiral is a an extermination job that went haywire because that damn wizard casted the wrong spell on a little creature. 
+			It now gets stronger and stronger and transforms into a more powerful foe every time it's defeated.
+			<br><br>
+			Spiral's gameplay consists of a series of boss fights. 
+			After defeating each transformation, the player gets to 'build' their character.
+			They get the option to refill their health or choose a new item.
+			Items replace the character's primary attack, secondary attack, or have passive effects.
+			By combining various items into a 'build', different playstyles emerge.
+		</p>
+		<br>
+		<h3>Using Spiral Development</h3>
+		<p>
+			This project is being created using the spiral development methodology. 
+			This involves creating a series of feature-complete builds, or “spirals”, that qualify as finished games, regardless of the amount of content they contain. 
+			Each spiral builds upon the previous and adds more content or features to the game, but at the end of each spiral, the game is in a finished state.
+			A finished state is defined as being playable from start to end with all included features in a complete state.
+			<br><br>
+			A major advantadge of this process is how it relates with scope. As each spiral is an iterative step forward, it also leaves the game technically complete as is.
+			<br><br>
+		</p>
+		<div class="columns">
+			<div class="colx2">
+				To keep track of our updates to the game, we used a three-number build numbering system. 
+				The first number represents the major version, or the state the game is in. 
+				During development, this number was a 0, because the game was in a pre-release state. 
+				The second number represents the spiral we were on. This number was incremented each spiral. 
+				The third number represents patches, typically quick bugfixes made after the spiral is completed. 
+			</div>
+			<div class="colx2">
+				<img class="icon" src="../assets/ss_spiral_numsys.png">
+			</div>
+		</div>
+		<br><br>
+		<h3>Developed Content</h3>
+		<p>
+			One standout story among the content I created was the boss 'Basilisk' and movement item 'Grappling Hook'.
+			With spiral development, we've prioritized the reuse of code where possible to quickly create content.
+			We've built this idea into our game idea, with the objective of reusing standout boss attacks as items.
+			One such example of this was a boss I created, the 'Basilisk'.
+			<br><br>
+			As an intro to the Basilisk: 
+			it was designed to roam, place down permanent hitboxes creating a hazerdous field, 
+			concentrate it's hazerdous area in the middle if being circled, and to launch a tongue attack that sticks the player and drags them to it's mouth.
+			This combination resulted in a boss that acted somewhat "campy".
+			<br><br>
+			The functionality of the Basilisks tongue attack were made with a 
+			Script using a LineRenderer that interpolates between the players position and basilisks mouth, then uses those points to be rendered in Unity's LineRenderer Component.
+			<br><br>
+			I quickly realized this functionality could be used for more content, so I morphed the attack into a movement item.
+			Instead of being pulled to an enemy, the player gained the ability to pull themself to anywhere on screen.
+		</p>
+		<br>
+		<h3>Procedural Animation</h3>
+		<p>
+			One of the major systems I've created as part of this project has been a Procedural Animation system.
+			<br><br>
+			Our team is made out of 4 programmers and 1 audio specialist. 
+			As we don't have any artists, I proposed this system on its merits of being stylisticly interesting and a viable alternative to reduce our artload.
+			We plan to bring on an artist in the future, however with this system in place we only need 3D models. No rigs nor animations necessary.
+			<br><br>
+			Procedural Animation is code-driven as opposed to handmade/keyframed traditional animation.
+			The first version of this system is in game and driving the player's animations.
+			<br><br>
+			Limbs are driven by a custom InverseKinematics script that uses 3 positions, a mesh, and a target. 
+			Using my custom IK, the script calculates the transformations necessary to make the end of the mesh to reach the target or point towards it if it's out of reach.
+			For player arms using positions for the Shoulder, Elbow, and Hand, the players hands are automatically placed in the default stance or to hold a specific item.
+			For the legs using positions for the Thigh, Knee, and Foot, the players feet are automatically placed to their next step location.
+			To drive the legs I also created another script called LegStepper to calculate the next step based on the distance traveled if there's at least 1 foot placed before stepping.
+			<br><br>
+			This system while being applied to the player will be used to drive all a cast of varied characters and bosses.
+		</p>
+	</body>
+</html>

@@ -55,6 +55,68 @@ a:hover {
     outline: none;
 }
 
+.buttons a {
+    text-decoration: none;
+}
+
+.text-image-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin-bottom: 20px;;
+    color: var(--text);
+    background: #0A3A30;
+    border: 4px solid var(--link);
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.text-image-button img {
+    z-index: 1; /* Ensure icon is above background */
+}
+
+.text-image-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Adjust icon background width */
+    height: 100%;
+    background-color: black;
+    z-index: 0; /* Place background below icon */
+    transition: all 0.3s ease;
+}
+
+.text-image-button span {
+    position: relative;
+    z-index: 1; /* Ensure text is above background */
+    padding-left: 23px; /* Add spacing for text */
+}
+
+.text-image-button:hover {
+    background-color: var(--link-hover);
+    color: var(--link-hover); /* Change text color on hover */
+    text-decoration: underline;
+}
+
+.text-image-button:hover:before {
+    background-color: black; /* Change icon background on hover */
+    width: 100%; /* Expand icon background */
+}
+
+
+.magnifiable {
+    cursor: zoom-in;
+    transition: transform 0.133s;
+}
+.magnifiable:hover {
+    transform: scale(2);
+}
+
 body {
     color:#b4b6b6;
     background-color: black;
@@ -83,6 +145,16 @@ h3 {
 p {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: var(--link);
+} 
+  
+::selection {
+    color: white;
+    background: var(--link);
 }
 
 .smp {

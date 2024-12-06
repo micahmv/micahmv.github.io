@@ -4,9 +4,7 @@
 		<title>MICAH VARGAS</title>
 		<meta name = "type" content = "website"/>
 		<link rel="stylesheet" href="../style.css">
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-		</style>
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
 	</head>
 	<body>
 		<div class="header">
@@ -36,6 +34,7 @@
 			<hr>
 			<a href="../index.html">HOME</a>
 			<a href="../portfolio.html">PORTFOLIO</a>
+			<a href="../archive.html">ARCHIVE</a>
 			<a href="../about.html">ABOUT</a>
 			<a href="../resume.pdf">RESUME</a>
 			<hr>
@@ -75,16 +74,14 @@
 		</div>
 		<h3>ABOUT</h3>
 		<div class="screenshots">
-			<img class="icon" src="../assets/ss_rr1.png">
-			<img class="icon" src="../assets/ss_rr2.png">
+			<img class="icon magnifiable" src="../assets/ss_rr1.png">
+			<img class="icon magnifiable" src="../assets/ss_rr2.png">
 		</div>
 		<p>
-			Rodent Rampage is a 2D endless runner game for iOS and Android developed by a team during MassDigi's Summer Innovation Program.
+			Rodent Rampage is a 2D endless runner game for iOS and Android featuring a squirrel with a leafblower jetpack traveling across procedurally generated areas.
 			<br><br>
-			Through MassDigi's DigiStudio program, I joined a team of designers, programmers, and artists to continue development of the published game.
+			Through MassDigi's DigiStudio internship, I joined a team of designers, programmers, and artists to continue development of the published game.
 			Our team was given the opportunity to self-select features to implement and polish as a content update for the title.
-			Some smaller additions included adding the game's animated cinematic to the title screen and designing and adding new chunks for the procedural generation system.
-			The larger changes made are detailed below:
 		</p>
 		<br>
 		<h3>New Power-Ups</h3>
@@ -112,6 +109,11 @@
 			I worked the game's physics system as to remedy this and allow for a snappier experience.
 			As well, many felt that they died deaths that were unfair. I looked into the issue and ended up changing the player character's hitbox to include only the squirrel.
 			Finally, the leafblowers visual and particle effects timing's felt slightly off so I tweaked their values to be more intune with expectations.
+		</p>
+		<br>
+		<h3>Intro Cutscene</h3>
+		<p>
+			I added the games intro cutscene to the main menu using Unity's Video Player component. 
 		</p>
 	</body>
 </html>

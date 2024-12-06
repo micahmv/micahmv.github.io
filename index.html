@@ -4,6 +4,7 @@
 		<title>MICAH VARGAS</title>
 		<meta name = "type" content = "website"/>
 		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
 	</head>
 	<body>
 		<div class="header">
@@ -33,18 +34,47 @@
 			<hr>
 			<a href="index.html" style="color:#82cd68">HOME</a>
 			<a href="portfolio.html">PORTFOLIO</a>
+			<a href="archive.html">ARCHIVE</a>
 			<a href="about.html">ABOUT</a>
 			<a href="resume.pdf">RESUME</a>
 			<hr>
 		</div>
-		<h3>Hello and welcome to my website!</h3>
-		<p>I'm Micah Vargas, or sometimes H4C1M. 
-			My passion lies in game development; 
-			specifically with bringing people together through games, gamifying the teaching process, and using interactive media to push environmental messaging.
-			You'll find a record of the games I've worked on in personal and professional capacities through this handmade website.
-			Feel free to browse and click for further details on any project!
-		</p>
-		<h3>See featured games below:</h3>
+		<br>
+		<div class="columns">
+			<div class="col">
+				<img class="icon" src="assets/mv_pfp.png" style="opacity: 100%;">
+			</div>
+			<div class="colx3">
+				<br>
+				<h3>Hello and welcome to my website!</h3>
+				<p style="margin-bottom: 20px;">I'm Micah Vargas, or sometimes H4C1M. 
+					You'll find a record of the projects I've worked on in personal and professional capacities through this handmade website.
+					Feel free to browse and click for further details on any of my projects!
+				</p>
+				<div class="buttons">
+					<a href="portfolio.html">
+						<button class="text-image-button" style="margin-right: 21px;">
+							<img src="assets/Favicon_64.png" alt="LinkedIn Icon" width="30" height="30">
+							<span>Go to portfolio</span>
+						</button>
+					</a>
+					<a href="https://h4c1m.itch.io/" target="_new">
+						<button class="text-image-button" style="margin-right: 21px;">
+							<img src="assets/itch-logo.png" alt="Itch.io Icon" width="30" height="30">
+							<span>Play my games</span>
+						</button>
+					</a>
+					<a href="resume.pdf" target="_new">
+						<button class="text-image-button">
+							<img src="assets/pdf-icon.png" alt="PDF Icon" width="30" height="30">
+							<span>View my resume</span>
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<br>
+		<h3 style="text-align: center; margin-bottom: 20px;">See featured projects below:</h3>
 	</div>
 	<div class="cards">
 		<div class="card">
@@ -57,18 +87,19 @@
 			<p>Created an educational game to learn typing for Sandy Spring Friends School to integrate into cirriculum.</p>
 		</div>
 		<div class="card">
-			<a href="portfolio/RodentRampage.html">
+			<a href="portfolio/AlphaJoust.html">
 				<div class="offsetHandler">
-					<img class="icon" src="assets/banner_rr.jpeg">
+					<img class="icon" src="assets/banner_aj.png">
 				</div>
-				<h3>Rodent Rampage</h3>
+				<br>
+				<h3>AlphaJoust</h3>
 			</a>
-			<p>Continued development on a published endless runner mobile game for the Massachussetts Digital Games Institute.</p>
+			<p>Used Neural Evolution of Augmenting Topologies (NEAT) to evolve a dynamically sized Neural Network to play the arcade classic Joust.</p>
 		</div>
 	</div>
 	<div class="smp">
 		<h3>
-			<a href="./portfolio.html">See more projects!</a>
+			<a href="./portfolio.html">See more in my portfolio!</a>
 		</h3>
 	</div>
 	</body>

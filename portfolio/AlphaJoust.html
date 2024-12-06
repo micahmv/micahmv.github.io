@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MICAH VARGAS</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="../style.css">
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
+	</head>
+	<body>
+		<div class="header">
+				<div class="left-div">
+					<h1>MICAH MATEO VARGAS</h1>
+					<h3>Game Developer</h3>
+				</div>
+				<div class="right-div">
+					<div class="linked-apps">
+						<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+							<img src="../assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+						</a>
+						<a href="https://h4c1m.itch.io/" target="_new">
+							<img src="../assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+						</a>
+						<a href="mailto:micahvargas@icloud.com" target="_new">
+							<img src="../assets/mail-icon.png" alt width="40" height="40" title="Mail">
+						</a>
+						<a href="../resume.pdf" target="_new">
+							<img src="../assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<a href="../index.html">HOME</a>
+			<a href="../portfolio.html">PORTFOLIO</a>
+			<a href="../archive.html">ARCHIVE</a>
+			<a href="../about.html">ABOUT</a>
+			<a href="../resume.pdf">RESUME</a>
+			<hr>
+		</div>
+
+		<h3>INFO</h3>
+		<div class="columns">
+			<div class="col">
+				<p> Project Type:<br>
+				Development Engine:<br>
+				Programming Language:<br>
+				Other Tools:<br>
+				Team Size:<br>
+				Role:<br>
+				Duration:<br></p>
+			</div>
+			<div class="col">
+				<p>Machine Learning<br>
+				Unity<br>
+				C#<br>
+				Neural Networks<br>
+				5<br>
+				Developer<br>
+				3 months<br></p>
+			</div>
+			<div class="col">
+				<img class="icon" style="opacity: 100%; padding-left:75px; max-width:400px;" src="../assets/ss_aj.png">
+			</div>
+		</div>
+		<h3>ABOUT</h3>
+		<p>
+			AlphaJoust is a machine learning demo where an agent/neural network was trained to play Joust using NEAT.
+		</p>
+		<br>
+		<h3>Recreating Joust</h3>
+		<p>
+			Part of this project was recreating the original arcade game Joust itself in Unity. 
+			One highlight of this process was going to the original Joust assembly code and using it's physics calculations for a 1:1 recreation of gameplay.
+		</p>
+		<br>
+		<h3>Neural Evolution of Augmenting Topologies (NEAT)</h3>
+		<p>
+			NEAT works by applying three key techniques: genetic encoding, tracking genes through historical markings, and protecting innovation through speciation. 
+					NEAT’s first technique, genetic encoding, works through a system of node genes connected by connection genes.
+					During mutation, both new node genes and connection genes can be added. 
+					The weights of the connection nodes as well as whether or not they are expressed can be also affected. 
+					Through this style of mutation, genomes of wildly varying sizes are created. 
+					Some of these genomes have the same node genes just with different connection genes. 
+		</p>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					The second technique that NEAT utilizes, tracking genes through historical markings, works through a system the creators call innovation numbers. 
+					Whenever a new gene appears through mutation, it is given a new global innovation number. 
+					Then when comparing two genomes, NEAT can easily distinguish which genes share the same historical origin by simply checking the genes’ innovation numbers. 
+					This allows any two structures to be combined without topological analysis. 
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_aj_neat.png">
+			</div>
+		</div>
+		<br>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					The third technique, protecting innovation through speciation, allows NEAT to divide the population into individual species based on topological similarities. 
+					This system uses the innovation numbers to compare how similar two genomes are.
+					The more disjoint they are, the less likely that they will be grouped into the same species. 
+					This mechanic preserves diversity among the population of genomes by employing explicit fitness sharing where genomes in the same species must share the fitness of their niche.
+					 These three key techniques allow NEAT to dominate in many difficult tests. For example, NEAT far exceeded the capabilities of other leading neuroevolution artificial intelligence models on the double pole balancing without velocity information task.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_aj_neat1.png">
+			</div>
+		</div>
+		<br>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					This is the UML diagram of our systems implementation:
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_aj_neat2.png">
+			</div>
+		</div>
+
+		<br>
+		<h3>Training the Agent</h3>
+		<p>
+			The fitness of our agent was measured by Joust's score. As such, we had a clear goal and representation of ability in game.
+			To control itself, each frame the agent generated an x-input value and a 0 or 1 to flap into the air.
+			To understand the world around it, the agent was provided an array each frame of it's own position and enemy positions each with an associated enemy type.<br><br>
+			Using our feature to control timescale, we left our agent training overnight several times saving at the end of each training session.
+			We saw a steady increase in the agent's fitness, with score already improving by 1000 after 40 generations.
+		</p>
+		<br>
+		<h3>Seeing all Simulations with 'MultiCam'</h3>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					One feature I created for this project was dynamically displaying a number of simulations on screen at once.
+					To do this, I created what I call a 'MultiCam'. 
+					I programmatically created a camera for each instance of Joust, outputed the camera's view into a RenderTexture, placed that RenderTexture into a material, and applied that material to quads placed in a square grid.
+					While this method was slightly less performant, it could be turned off mid-training and was a good way to quickly see how all simulations were doing.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_aj_multicam.png">
+			</div>
+		</div>
+	</body>
+</html>

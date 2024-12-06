@@ -4,10 +4,7 @@
 		<title>MICAH VARGAS</title>
 		<meta name = "type" content = "website"/>
 		<link rel="stylesheet" href="../style.css">
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-		</style>
-	</head>
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
 	<body>
 		<div class="header">
 				<div class="left-div">
@@ -36,6 +33,7 @@
 			<hr>
 			<a href="../index.html">HOME</a>
 			<a href="../portfolio.html">PORTFOLIO</a>
+			<a href="../archive.html">ARCHIVE</a>
 			<a href="../about.html">ABOUT</a>
 			<a href="../resume.pdf">RESUME</a>
 			<hr>
@@ -66,24 +64,158 @@
 			</div>
 		</div>
 		<h3>ABOUT</h3>
-		<div class="screenshots">
-			<img class="icon" src="../assets/ss_wk_wbw.png">
-			<img class="icon" src="../assets/ss_wk_boss.png">
-		</div>
 		<p>
-			WildeKey is a 2D educational game hosted on the web created with the design goal to make learning to type fun. 
-			Players go world to world, unlocking more of the keyboard to practice as they move across levels.
-			Levels comprise of two types, wave based typing in lanes and boss fights.
-			In the first, waves of creatures appear for the player to save by typing their displayed text while switching between lanes.
-			Against bosses, players instead take a more formal word per minute test where they use the unlocked portion of the keyboard and type out a paragraph to defeat the boss.
+			WildeKey is a 2D educational game hosted on the web, created with the design goal to make learning to type fun. 
+			Players go world to world, unlocking more of the keyboard to practice typing as they move across levels.
 			Assuming the role of a wildebeest wizard, the player progresses through color-saturated cartooney environments engaging a wide range of creatures perfect for elementary school students.<br>
 			<br>
 			Created to integrate into Sandy Spring Friends School cirriculum, our team composing of two developers and one mentor worked on this project for 9 months.
-			Our project had an emphasis on implementing a strong development plan, using story-boarding and a Gantt Chart.<br>
-			My role in this project was as a:<br>
-			- designer, coming up with the initial idea when reflecting on how boring learning to type was when I was a child.<br>
-			- artist, drawing all the games creatures, bosses, world-map tiles, and backgrounds. <br>
-			- programmer, creating all scripts and systems for a world map, typing in the lane-based and paragraph based approaches, and using scriptable objects to make creatures a datatype.<br>
+			Our project had an emphasis on implementing a strong development plan, using story-boarding, and a Gantt Chart.<br><br>
+			My role in this project was as a:<br>			
 		</p>
+		<ul>
+			<li>Producer: developed using production skills including a strong development plan, story-boarding, and a comprehensive Gantt chart.</li>
+			<li>Programmer: creating all scripts and systems for a world map, typing in the lane-based and paragraph based approaches, and using scriptable objects to make creatures a datatype.</li>
+			<li>Designer: coming up with the initial idea when reflecting on how boring learning to type was when I was a child.</li>
+			<li>Artist: drawing all the games creatures, bosses, world-map tiles, and backgrounds.</li>
+		</ul>
+		<br>
+		<h3>TYPING</h3>
+		<p>WildeKey includes 2 forms of gameplay/typing:</p>
+		<div class="columns">
+			<div class="colx2">
+				<p>Most levels consist of 'lane typing'.
+					In this mode the player switches between lanes typing out creatures running towards them.
+					The goal is to type out creatures before they reach you. 
+					Once enough creatures have been typed out, the level is complete.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_wk_wbw.png">
+			</div>
+		</div>
+		<br>
+		<div class="columns">
+			<div class="colx2">
+				<p>At the end of each world is a 'boss fight'.
+					These act as traditional typing tests where the player is presented a body of text to type out as fast as possible.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_wk_boss.png">
+			</div>
+		</div>
+		<br>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					We also present dialogue text to the player on certain levels.
+					While this text is not typed out, it is visualized on screen character by character using a simple for loop.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_wk_dialogue.gif">
+			</div>
+		</div>
+		<br>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					At the end of each level the player is shown a score and accuracy. 
+					If the level was lane typing they're shown the number of creatures saved.
+					If the level was a boss fight they're shown their words per minute (wpm). 
+					For reference, WPM is the standard for measuring typing speed.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_wk_score.png">
+			</div>
+		</div>
+		<br>
+		<p>We pushed our systems to be dynamic. As such we also created two special levels that extended our systems.<br><br>
+			While levels consisted solely of either lane tying or boss fights, we created a level where we switched between the two.
+			In a fortress clearly defined on the world map, the player faces creatures at the gate of the castle. 
+			After typing all creatures, the player immediately fights the boss.
+			Before creating this functionality, we were loading seperate scenes for the two different typing methods.
+			We changed this implementation, turning the objects in scene into prefabs so we could easily instantiate the boss after the creatures were completed.
+			<br><br>
+			The lanes system was originally made to support a dynamic amount of lanes, a feature we left behind while fleshing out and polishing our gameplay.
+			When finishing out the game, I revisited this functionality for the final level of the game.
+			The final level thus includes three lanes (as compared to the typical two in the rest of the game) using the comppleted dynamic lane support.
+			As well, with bosses easily instantiable we made the final boss three parts with three bodys of text to type out.
+		</p>
+		<br>
+
+		<h3>Abstracting objects using ScriptableObject data types</h3>
+		<p>
+			Given that each type of character (creatures and bosses) acted with the same functionality, we abstracted using two custom ScriptableObject data types.
+			The first being 'CreatureData' which had a name, world, speed, and list of running sprites for its animation.
+			The second being 'BossData' which had a name, default-text, world, and list of idle sprites for its animation.
+			Given this abstraction, we only had 2 prefabs ('Creature' and 'Boss') that loaded their relevant data from their ScriptableObject.
+		</p>
+		<br>
+
+		<h3>WORLD MAP / TILEMAP</h3>
+		<div class="columns">
+			<div class="colx2" style="padding-right: 55px;">
+				<p>
+					Along WildeKey's adventure there are:<br>
+					- 6 unique areas <br>
+					- 27 different levels <br><br>
+					Each area progressively add more portions of the keyboard to practice.<br><br>
+				</p>
+			</div>
+			<div class="colx2">
+				<p>
+					The world map uses Unity's Tilemap system as part of the 2D Tilemap Editor package. 
+					A tilemap is a grid of tiles that is drawn in using a Tile palette.
+					We drew all tiles as 8x8 squares that would interconnect correctly.<br><br>
+					See the tile palette below:
+				</p>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="colx2" style="width:40%; padding-right: 100px;">
+				<img class="icon magnifiable" src="../assets/ss_wk_wm.png">
+			</div>
+			<div class="colx2" style="width:40%">
+				<img class="icon magnifiable" src="../assets/ss_wk_tileset.png">
+			</div>
+		</div>
+		<br>
+
+		<h3>PIXEL ART & ANIMATION</h3>
+		<p>Custom color palette made for the games art:</p>
+		<img class="icon" style="max-width: 100%;" src="../assets/ss_wk_palette.png"><br>
+		<p>Bosses each with an idle animation:</p>
+		<img class="icon magnifiable" style="background-color: black; max-width: 100%;" src="../assets/ss_wk_bosses.gif"><br><br>
+		<p>Creatures each with a run cycle:</p>
+		<img class="icon magnifiable" style="background-color: black; max-width: 100%;" src="../assets/ss_wk_creatures.gif"><br><br>
+		<p>Backgrounds for different areas:</p>
+		<img class="icon magnifiable" style="width: 58%;  display: block; margin-left: auto; margin-right: auto;" src="../assets/ss_wk_bgs.gif">
+		<br>
+
+		<h3>GANTT CHART</h3>
+		<img class="icon magnifiable" style="max-width: 100%;" src="../assets/ss_wk_gantt.png">
+		<br>
+
+		<h3>ACCESSIBILITY</h3>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					The entire game is playable in three different font choices, swappable in the main menu.<br><br>
+					Included is <a href="https://opendyslexic.org/">OpenDyslexic</a>, a typeface designed against the common symtoms of dyslexia and made to be easily legible.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_wk_fonts.gif">
+			</div>
+		</div>
+		<br>
+		<h3>DIVERSITY & INCLUSION</h3>
+		<p>To maintain a certain standard of inclusion, we decided that all human characters with skin would have multiple versions to represent different skin colors.
+			We made this decision to promote diversity, especialy since our game was being made for elementary school students.
+		</p>
+		<br>
 	</body>
 </html>
