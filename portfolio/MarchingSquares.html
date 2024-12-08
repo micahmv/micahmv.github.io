@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MICAH VARGAS</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="../style.css">
+		<link rel="icon" type="image/png" href="../favicon.ico" sizes="16x16">
+	</head>
+	<body>
+		<div class="header">
+				<div class="left-div">
+					<h1>MICAH MATEO VARGAS</h1>
+					<h3>Game Developer</h3>
+				</div>
+				<div class="right-div">
+					<div class="linked-apps">
+						<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+							<img src="../assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+						</a>
+						<a href="https://h4c1m.itch.io/" target="_new">
+							<img src="../assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+						</a>
+						<a href="mailto:micahvargas@icloud.com" target="_new">
+							<img src="../assets/mail-icon.png" alt width="40" height="40" title="Mail">
+						</a>
+						<a href="../resume.pdf" target="_new">
+							<img src="../assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+						</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<div class="buttons">
+				<a href="../index.html">
+					<button class="text-button">
+						<span>HOME</span>
+					</button>
+				</a>
+				<a href="../portfolio.html">
+					<button class="text-button">
+						<span>PORTFOLIO</span>
+					</button>
+				</a>
+				<a href="../archive.html">
+					<button class="text-button">
+						<span>ARCHIVE</span>
+					</button>
+				</a>
+				<a href="../about.html">
+					<button class="text-button">
+						<span>ABOUT</span>
+					</button>
+				</a>
+				<a href="../resume.html">
+					<button class="text-button">
+						<span>RESUME</span>
+					</button>
+				</a>
+			</div>
+			<hr>
+		</div>
+
+		<h3>INFO</h3>
+		<div class="columns">
+			<div class="col">
+				<p> Project Type:<br>
+				Development Engine:<br>
+				Programming Language:<br>
+				Team Size:<br>
+				Role:<br>
+				Duration:<br>
+				Implemented:<br>
+			</p>
+			</div>
+			<div class="col">
+				<p>Procedural Programming<br>
+				Unity<br>
+				C#<br>
+				1<br>
+				Programmer<br>
+				2 weeks<br>
+				Marching Squares<br>
+			</p>
+			</div>
+			<div class="col">
+				<img class="icon" style="opacity: 100%; padding-left:20px; max-width:442px;" src="../assets/banner_ms.gif">
+			</div>
+		</div>
+
+		<div class="screenshots">
+			<img class="icon magnifiable" src="../assets/ss_ms_physics.gif">
+			<img class="icon magnifiable" src="../assets/ss_ms_gizmos.gif">
+		</div>
+
+		<h3>ABOUT</h3>
+		<p>
+			I created an implementation of the Marching Squares algorithm in Unity.
+			This technique involved storing 'saddle points' which depending on how the 4 points of a square were activated, would result in 1 of 16 variations.
+			By activating points in a dense 2D grid of marching squares, a carving effect is made.
+			Since this code actively monitors and stores all points, it creates the Mesh itself with the exposed points of the marching squares array.
+			As well, I powered an EdgeCollider using the same points which enabled interactions with Unitys physics system. 
+			Finally, I extended the marching squares algorithm by using interpolation of middlepoints. 
+			All of the 16 variations of marching squares are different cutups of squares, but all contour lines are always cut from one midpoint to another.
+			So, by allowing midpoints to interpolate from top-to-bottom/left-to-right based on 0 to 1 allowed for the marching squares to behave even more dynamically.  
+		</p>
+		<br>
+		
+		<h3>MARCHING SQUARES</h3>
+		<img class="icon" style="max-width: 100%;" src="../assets/ss_ms_squares.png">
+	</body>
+</html>
