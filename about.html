@@ -59,7 +59,17 @@
 		<div class="main">
             <div class="columns">
                 <div class="col">
-                    <img class="icon" src="assets/mv_avatar.png" alt="Micah Vargas" style="opacity: 100%; padding-top: 10px;">
+                    <img class="icon" id="pfp" src="" alt="Micah Vargas" style="opacity: 100%; padding-top: 10px;">
+                    <script>
+                        var pfps = ["mv_avatar.png", "mv_pfp.png", "mv_pixelavatar.png"];
+                
+                        function randPFP() {
+                            var rand = Math.floor(Math.random() * pfps.length);
+                            document.getElementById("pfp").src = "https://micahvargas.com/assets/" + pfps[rand];
+                        }
+                
+                        window.onload = randPFP;
+                    </script>
                 </div>
                 <div class="colx3">
                     <br>
