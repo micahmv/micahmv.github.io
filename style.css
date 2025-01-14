@@ -150,13 +150,15 @@ a:hover {
     width: 100%; /* Expand icon background */
 }
 
-
+/* magnifiable only on devices that support hover / have a mouse */
 .magnifiable {
     cursor: zoom-in;
     transition: transform 0.133s;
 }
-.magnifiable:hover {
-    transform: scale(2);
+@media (hover: hover) {
+    .magnifiable:hover {
+        transform: scale(2);
+    }
 }
 
 body {
