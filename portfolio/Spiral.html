@@ -87,76 +87,51 @@
 			<img class="icon magnifiable" src="../assets/ss_spiral3.png" alt="Project Spiral screenshot">
 		</div>
 		<p>
-			Project Spiral is a an extermination job that went haywire because that damn wizard casted the wrong spell on a little creature. 
-			It now gets stronger and stronger and transforms into a more powerful foe every time it's defeated.
+			Project Spiral is a boss rush game where an extermination job goes awry after a wizard's spell transforms a small creature into a progressively stronger foe. 
+			Each time the boss is defeated, it transforms, challenging the player further.
 			<br><br>
 			Spiral's gameplay consists of a series of boss fights. 
-			After defeating each transformation, the player gets to 'build' their character.
-			They get the option to refill their health or choose a new item.
-			Items replace the character's primary attack, secondary attack, or have passive effects.
-			By combining various items into a 'build', different playstyles emerge.
+			After each victory, players can build their character by either refilling health or selecting a new item. 
+			Items can replace primary or secondary attacks or offer passive effects, encouraging diverse playstyles based on item combinations.
 		</p>
 		<br>
 		<h3>Using Spiral Development</h3>
 		<p>
-			This project is being created using the spiral development methodology. 
-			This involves creating a series of feature-complete builds, or “spirals”, that qualify as finished games, regardless of the amount of content they contain. 
-			Each spiral builds upon the previous and adds more content or features to the game, but at the end of each spiral, the game is in a finished state.
-			A finished state is defined as being playable from start to end with all included features in a complete state.
+			Project Spiral is developed using the spiral development methodology, where each build, or “spiral,” is a feature-complete version of the game with closed game-loops. 
+			Each iteration builds on the previous, expanding content and features while keeping the game playable from start to finish.
 			<br><br>
-			A major advantadge of this process is how it relates with scope. As each spiral is an iterative step forward, it also leaves the game technically complete as is.
+			This iterative approach helps manage scope effectively, ensuring a technically complete experience at the end of every spiral. In effect, this means no matter when time or money runs out, the game is complete.
 			<br><br>
+			To track progress, we use a three-number build system:
 		</p>
 		<div class="columns">
 			<div class="colx2">
-				To keep track of our updates to the game, we used a three-number build numbering system. 
-				The first number represents the major version, or the state the game is in. 
-				During development, this number was a 0, because the game was in a pre-release state. 
-				The second number represents the spiral we were on. This number was incremented each spiral. 
-				The third number represents patches, typically quick bugfixes made after the spiral is completed. 
+					<ul>Major Version: State of the game (eg 0 for pre-release)</ul>
+					<ul>Spiral Number: Current iteration of content and feature expansion</ul>
+					<ul>Patch Number: Bug fixes and refinements after a spiral</ul>
 			</div>
 			<div class="colx2">
 				<img class="icon" src="../assets/ss_spiral_numsys.png">
 			</div>
 		</div>
-		<br><br>
-		<h3>Developed Content</h3>
+		<br>
+		<h3>Content Development & Reuse</h3>
 		<p>
-			One standout story among the content I created was the boss 'Basilisk' and movement item 'Grappling Hook'.
-			With spiral development, we've prioritized the reuse of code where possible to quickly create content.
-			We've built this idea into our game idea, with the objective of reusing standout boss attacks as items.
-			One such example of this was a boss I created, the 'Basilisk'.
+			A key example of our content reuse strategy is the Basilisk boss and the Grappling Hook item. 
+			The Basilisk was designed to create a hazardous battlefield by placing permanent hitboxes and using a tongue attack to drag the player into danger.
 			<br><br>
-			As an intro to the Basilisk: 
-			it was designed to roam, place down permanent hitboxes creating a hazerdous field, 
-			concentrate it's hazerdous area in the middle if being circled, and to launch a tongue attack that sticks the player and drags them to it's mouth.
-			This combination resulted in a boss that acted somewhat "campy".
-			<br><br>
-			The functionality of the Basilisks tongue attack were made with a 
-			Script using a LineRenderer that interpolates between the players position and basilisks mouth, then uses those points to be rendered in Unity's LineRenderer Component.
-			<br><br>
-			I quickly realized this functionality could be used for more content, so I morphed the attack into a movement item.
-			Instead of being pulled to an enemy, the player gained the ability to pull themself to anywhere on screen.
+			The tongue attack was implemented with a custom LineRenderer script, interpolating points between the Basilisk's mouth and the player’s position, visualized using Unity’s LineRenderer component. 
+			Recognizing the reusability of this mechanic, I adapted it into a Grappling Hook item, allowing the player to pull themselves toward any point on the screen.
 		</p>
 		<br>
 		<h3>Procedural Animation</h3>
 		<p>
-			One of the major systems I've created as part of this project has been a Procedural Animation system.
+			To reduce our art workload with a team of 4 programmers and 1 audio specialist, I proposed and developed a procedural animation system as a code-driven alternative to traditional keyframed animation. 
+			This system drives both player and enemy animations, requiring only 3D models—no rigs or keyframes necessary.
 			<br><br>
-			Our team is made out of 4 programmers and 1 audio specialist. 
-			As we don't have any artists, I proposed this system on its merits of being stylisticly interesting and a viable alternative to reduce our artload.
-			We plan to bring on an artist in the future, however with this system in place we only need 3D models. No rigs nor animations necessary.
-			<br><br>
-			Procedural Animation is code-driven as opposed to handmade/keyframed traditional animation.
-			The first version of this system is in game and driving the player's animations.
-			<br><br>
-			Limbs are driven by a custom InverseKinematics script that uses 3 positions, a mesh, and a target. 
-			Using my custom IK, the script calculates the transformations necessary to make the end of the mesh to reach the target or point towards it if it's out of reach.
-			For player arms using positions for the Shoulder, Elbow, and Hand, the players hands are automatically placed in the default stance or to hold a specific item.
-			For the legs using positions for the Thigh, Knee, and Foot, the players feet are automatically placed to their next step location.
-			To drive the legs I also created another script called LegStepper to calculate the next step based on the distance traveled if there's at least 1 foot placed before stepping.
-			<br><br>
-			This system while being applied to the player will be used to drive all a cast of varied characters and bosses.
+			The system uses a custom Inverse Kinematics (IK) script controlling limb positions through a 3-point structure (shoulder, elbow, hand for arms and thigh, knee, foot for legs).
+			<ul>Arms: Automatically adjust stance and item-holding position</ul>
+			<ul>Legs: A seperate LegStepper script calculates foot placement based on character movement, ensuring dynamic motion.</ul>
 		</p>
 	</body>
 </html>

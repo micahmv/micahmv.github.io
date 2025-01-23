@@ -82,20 +82,12 @@
 		</div>
 		<h3>ABOUT</h3>
 		<p>
-			WildeKey is a 2D educational game hosted on the web, created with the design goal to make learning to type fun. 
-			Players go world to world, unlocking more of the keyboard to practice typing as they move across levels.
-			Assuming the role of a wildebeest wizard, the player progresses through color-saturated cartooney environments engaging a wide range of creatures perfect for elementary school students.<br>
+			WildeKey is a web-hosted, 2D educational game designed to make learning to type engaging and fun for elementary school students. 
+			Players explore colorful, cartoon-inspired worlds as a wildebeest wizard, unlocking new sections of the keyboard and encountering a variety of whimsical creatures while progressing through levels.<br>
 			<br>
 			Created to integrate into Sandy Spring Friends School cirriculum, our team composing of two developers and one mentor worked on this project for 9 months.
-			Our project had an emphasis on implementing a strong development plan, using story-boarding, and a Gantt Chart.<br><br>
-			My role in this project was as a:<br>			
+			Our project had an emphasis on implementing a strong development plan, using story-boarding, and a Gantt Chart.<br>
 		</p>
-		<ul>
-			<li>Producer: developed using production skills including a strong development plan, story-boarding, and a comprehensive Gantt chart.</li>
-			<li>Programmer: creating all scripts and systems for a world map, typing in the lane-based and paragraph based approaches, and using scriptable objects to make creatures a datatype.</li>
-			<li>Designer: coming up with the initial idea when reflecting on how boring learning to type was when I was a child.</li>
-			<li>Artist: drawing all the games creatures, bosses, world-map tiles, and backgrounds.</li>
-		</ul>
 		<br>
 		<h3>TYPING</h3>
 		<p>WildeKey includes 2 forms of gameplay/typing:</p>
@@ -127,7 +119,7 @@
 			<div class="colx2">
 				<p>
 					We also present dialogue text to the player on certain levels.
-					While this text is not typed out, it is visualized on screen character by character using a simple for loop.
+					While this text is not typed out, it is visualized on screen character by character using a for loop.
 				</p>
 			</div>
 			<div class="colx2">
@@ -140,7 +132,7 @@
 				<p>
 					At the end of each level the player is shown a score and accuracy. 
 					If the level was lane typing they're shown the number of creatures saved.
-					If the level was a boss fight they're shown their words per minute (wpm). 
+					If the level was a boss fight they're shown their words per minute (WPM). 
 					For reference, WPM is the standard for measuring typing speed.
 				</p>
 			</div>
@@ -149,29 +141,27 @@
 			</div>
 		</div>
 		<br>
-		<p>We pushed our systems to be dynamic. As such we also created two special levels that extended our systems.<br><br>
-			While levels consisted solely of either lane tying or boss fights, we created a level where we switched between the two.
-			In a fortress clearly defined on the world map, the player faces creatures at the gate of the castle. 
-			After typing all creatures, the player immediately fights the boss.
-			Before creating this functionality, we were loading seperate scenes for the two different typing methods.
-			We changed this implementation, turning the objects in scene into prefabs so we could easily instantiate the boss after the creatures were completed.
-			<br><br>
-			The lanes system was originally made to support a dynamic amount of lanes, a feature we left behind while fleshing out and polishing our gameplay.
-			When finishing out the game, I revisited this functionality for the final level of the game.
-			The final level thus includes three lanes (as compared to the typical two in the rest of the game) using the comppleted dynamic lane support.
-			As well, with bosses easily instantiable we made the final boss three parts with three bodys of text to type out.
+		<h3>Expanding Core Systems with Dynamic Design</h3>
+		<p>We prioritized making WildeKey’s systems flexible and reusable, leading to the creation of two special levels that extended core mechanics.
+			<ul>
+				<li>Fortress Level: Initially, levels consisted of either lane typing or boss fights, loaded as separate scenes. To create a fortress level combining both, we refactored the system by converting scene objects into prefabs, allowing seamless instantiation of the boss immediately after defeating the creatures at the castle gate.</li>
+				<br>
+				<li>Final Level: The lane system was originally built to support a dynamic number of lanes, but this feature was deprioritized during polish. I later reimplemented it for the final level, which introduced three lanes (compared to the standard two). With bosses also converted into prefabs, the final encounter featured a multi-phase boss fight requiring players to complete three separate bodies of text.</li>
+			</ul>
 		</p>
 		<br>
 
-		<h3>Abstracting objects using ScriptableObject data types</h3>
+		<h3>Abstracting Entities with ScriptableObjects</h3>
 		<p>
-			Given that each type of character (creatures and bosses) acted with the same functionality, we abstracted using two custom ScriptableObject data types.
-			The first being 'CreatureData' which had a name, world, speed, and list of running sprites for its animation.
-			The second being 'BossData' which had a name, default-text, world, and list of idle sprites for its animation.
-			Given this abstraction, we only had 2 prefabs ('Creature' and 'Boss') that loaded their relevant data from their ScriptableObject.
+			To streamline development and reduce redundancy, we abstracted creatures and bosses using two custom ScriptableObject data types:
+			<ul>
+				<li>CreatureData: Included fields for name, world, movement speed, and a list of running sprites.</li>
+				<br>
+				<li>BossData: Included fields for name, world, default text, and a list of idle sprites.</li>
+			</ul>
+			This abstraction allowed both characters to share the same prefabs (Creature and Boss), dynamically loading their respective data at runtime.
 		</p>
 		<br>
-
 		<h3>WORLD MAP / TILEMAP</h3>
 		<div class="columns">
 			<div class="colx2" style="padding-right: 55px;">
@@ -184,9 +174,9 @@
 			</div>
 			<div class="colx2">
 				<p>
-					The world map uses Unity's Tilemap system as part of the 2D Tilemap Editor package. 
-					A tilemap is a grid of tiles that is drawn in using a Tile palette.
-					We drew all tiles as 8x8 squares that would interconnect correctly.<br><br>
+					The world map was built using Unity's Tilemap system from the 2D Tilemap Editor package. 
+					This allowed for a tilemap (a grid of tiles) to be placed using a Tile palette.
+					All tiles were drawn as 8x8 squares that interconnect seamlessly.<br><br>
 					See the tile palette below:
 				</p>
 			</div>
@@ -231,7 +221,7 @@
 		<br>
 		<h3>DIVERSITY & INCLUSION</h3>
 		<p>To maintain a certain standard of inclusion, we decided that all human characters with skin would have multiple versions to represent different skin colors.
-			We made this decision to promote diversity, especialy since our game was being made for elementary school students.
+			We made this decision to promote diversity, especially since our game was being made for elementary school students.
 		</p>
 		<br>
 	</body>

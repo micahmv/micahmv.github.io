@@ -83,31 +83,53 @@
 		</div>
 		<h3>ABOUT</h3>
 		<p>
-			AlphaJoust is a machine learning demo where an agent/neural network was trained to play Joust using NEAT.
+			AlphaJoust is a machine learning demo where an agent was trained to play the classic arcade game Joust using the NEAT algorithm (NeuroEvolution of Augmenting Topologies).
 		</p>
 		<br>
 		<h3>Recreating Joust</h3>
 		<p>
-			Part of this project was recreating the original arcade game Joust itself in Unity. 
-			One highlight of this process was going to the original Joust assembly code and using it's physics calculations for a 1:1 recreation of gameplay.
+			A key part of the project involved recreating Joust in Unity. 
+			Since our focus was on AI, our team built upon a pre-existing Joust remake, which provided a foundation while allowing us to modify and extend it. 
+			We made several enhancements, including adjustments to the physics to better match the original game, which was coded in Assembly. 
+			We referenced the original Assembly code to ensure accuracy and fidelity to the originals gameplay.
 		</p>
 		<br>
-		<h3>Neural Evolution of Augmenting Topologies (NEAT)</h3>
+		<h3>Implementing NEAT with UnitySharpNEAT</h3>
 		<p>
-			NEAT works by applying three key techniques: genetic encoding, tracking genes through historical markings, and protecting innovation through speciation. 
-					NEAT’s first technique, genetic encoding, works through a system of node genes connected by connection genes.
-					During mutation, both new node genes and connection genes can be added. 
-					The weights of the connection nodes as well as whether or not they are expressed can be also affected. 
-					Through this style of mutation, genomes of wildly varying sizes are created. 
-					Some of these genomes have the same node genes just with different connection genes. 
+			For the AI training, we utilized UnitySharpNEAT, an open-source implementation of NEAT for Unity. 
+			UnitySharpNEAT builds on SharpNEAT, a C# NEAT framework, providing features like object pooling, better coroutine management, and multi-experiment support. 
+			This library streamlined the integration of neural networks into Unity, making it well-suited for Joust’s mechanics, which require rapid decision-making and adaptive strategies.
 		</p>
 		<div class="columns">
 			<div class="colx2">
 				<p>
-					The second technique that NEAT utilizes, tracking genes through historical markings, works through a system the creators call innovation numbers. 
-					Whenever a new gene appears through mutation, it is given a new global innovation number. 
-					Then when comparing two genomes, NEAT can easily distinguish which genes share the same historical origin by simply checking the genes’ innovation numbers. 
-					This allows any two structures to be combined without topological analysis. 
+					To better structure the agent's iteraction with the game environment, we designed a modular system, as shown in the UML diagram. 
+					This system manages game state input, fitness evaluation, and neural network outputs efficiently.
+				</p>
+			</div>
+			<div class="colx2">
+				<img class="icon magnifiable" src="../assets/ss_aj_neat2.png" alt="UML Diagram">
+			</div>
+		</div>
+		<br>
+		<h3>How NEAT Works</h3>
+		<p>
+			NEAT works through three primary techniques: applying three key techniques: 
+			genetic encoding, tracking genes through historical markings, and protecting innovation through speciation. 
+			<br><br>
+			1. Genetic Encoding: Each neural network consists of node and connection genes, whcich mutate over generations by adding new nodes, connections, and modifying weights.
+		</p>
+		<div class="columns">
+			<div class="colx2">
+				<p>
+					2. Tracking Genes through Historical Markings with Innovation Numbers: 
+					NEAT assigns a unique global innovation number to each new mutation, such as an added connection or node. 
+					This allows the algorithm to efficiently track the evolutionary history of genes. 
+					When comparing genomes, innovation numbers help determine which genes share common ancestry and which are unique, facilitating seamless crossover without requiring topological analysis. 
+					This approach ensures structural compatibility between networks, allowing effective recombination of solutions.
+
+					<br><br>
+					The diagram illustrates the genome crossover process, depicting how NEAT handles disjoint and excess genes by aligning genes based on their innovation numbers. This visual representation clarifies how NEAT ensures genetic compatibility and preserves meaningful structures during evolution.
 				</p>
 			</div>
 			<div class="colx2">
@@ -115,14 +137,26 @@
 			</div>
 		</div>
 		<br>
+		<p>
+			3. Speciation for Innovation Protection:
+			NEAT protects innovation by dividing the population into species based on topological similarity. 
+			This is achieved by comparing innovation numbers to determine the degree of similarity between genomes—more disjoint genes result in lower similarity, leading to different species classifications. 
+			Speciation preserves diversity by employing explicit fitness sharing, where individuals within a species share fitness values, ensuring that novel or complex structures have the opportunity to evolve without direct competition from more optimized existing solutions. 
+			This mechanism played a crucial role in the Joust use case, allowing different strategies to develop and preventing premature convergence on suboptimal behaviors.
+		</p>
+		<br>
+		<h3>Training the Agent</h3>
+		<p>
+			We trained the agent by using Joust's score as a fitness metric, giving us a clear representation of performance. 
+			The agent received inputs for its own position and enemy positions, and produced outputs for horizontal movement and flapping. 
+			By leveraging Unity's timescale adjustment, we were able to train from 1 to 10x speed on personal devices which resulted in steadily increasing scores over generations.
+		</p>
 		<div class="columns">
 			<div class="colx2">
 				<p>
-					The third technique, protecting innovation through speciation, allows NEAT to divide the population into individual species based on topological similarities. 
-					This system uses the innovation numbers to compare how similar two genomes are.
-					The more disjoint they are, the less likely that they will be grouped into the same species. 
-					This mechanic preserves diversity among the population of genomes by employing explicit fitness sharing where genomes in the same species must share the fitness of their niche.
-					 These three key techniques allow NEAT to dominate in many difficult tests. For example, NEAT far exceeded the capabilities of other leading neuroevolution artificial intelligence models on the double pole balancing without velocity information task.
+					The flow chart here visually represents the evaluation process of genomes during training, making it easier to understand how fitness evaluation and evolution proceed step-by-step. 
+					It outlines the sequence in which genomes are initialized, evaluated based on their performance in the game, and subsequently evolved by applying genetic operators such as mutation and crossover. 
+					This structured approach ensures that the most promising solutions are iteratively refined across generations, leading to increasingly effective gameplay strategies.
 				</p>
 			</div>
 			<div class="colx2">
@@ -130,35 +164,14 @@
 			</div>
 		</div>
 		<br>
-		<div class="columns">
-			<div class="colx2">
-				<p>
-					This is the UML diagram of our systems implementation:
-				</p>
-			</div>
-			<div class="colx2">
-				<img class="icon magnifiable" src="../assets/ss_aj_neat2.png" alt="UML Diagram">
-			</div>
-		</div>
-
-		<br>
-		<h3>Training the Agent</h3>
-		<p>
-			The fitness of our agent was measured by Joust's score. As such, we had a clear goal and representation of ability in game.
-			To control itself, each frame the agent generated an x-input value and a 0 or 1 to flap into the air.
-			To understand the world around it, the agent was provided an array each frame of it's own position and enemy positions each with an associated enemy type.<br><br>
-			Using our feature to control timescale, we left our agent training overnight several times saving at the end of each training session.
-			We saw a steady increase in the agent's fitness, with score already improving by 1000 after 40 generations.
-		</p>
-		<br>
 		<h3>Seeing all Simulations with 'MultiCam'</h3>
 		<div class="columns">
 			<div class="colx2">
 				<p>
-					One feature I created for this project was dynamically displaying a number of simulations on screen at once.
-					To do this, I created what I call a 'MultiCam'. 
-					I programmatically created a camera for each instance of Joust, outputed the camera's view into a RenderTexture, placed that RenderTexture into a material, and applied that material to quads placed in a square grid.
-					While this method was slightly less performant, it could be turned off mid-training and was a good way to quickly see how all simulations were doing.
+					To monitor training progress, I developed a feature called MultiCam that dynamically displayed multiple simulations on screen simultaneously. 
+					Each simulation had its own camera rendering to a texture, which was applied to a grid of quads. 
+					I programmatically created a Camera for each instance of Joust, outputted the camera's view into a RenderTexture, placed that RenderTexture into a material, and applied that material to quads arranged in a square grid.
+					While this approach had some performance cost, it allowed for quick evaluation of the agent's progress and could be toggled on or off as needed.
 				</p>
 			</div>
 			<div class="colx2">
