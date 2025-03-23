@@ -28,7 +28,7 @@ header {
 
 /* make certain elements larger for mobile */
 /* 768 should include phones and tablets */
-@media (max-width: 600px) {
+@media (hover: none) {
     .linked-apps a img {
         width: 50px;
         height: 50px;
@@ -202,7 +202,7 @@ a:hover {
 }
 
 /* magnifiable only on devices that support hover / have a mouse */
-@media (hover: none) {
+@media (hover: hover) {
     .magnifiable:hover {
         transform: scale(2);
     }
