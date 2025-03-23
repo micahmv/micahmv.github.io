@@ -28,7 +28,7 @@ header {
 
 /* make certain elements larger for mobile */
 /* 768 should include phones and tablets */
-@media (hover: none) {
+@media ((max-width: 600px) and (pointer: coarse)) {
     .linked-apps a img {
         width: 50px;
         height: 50px;
