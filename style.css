@@ -174,6 +174,25 @@ a:hover {
     transition: transform 0.133s;
 }
 
+.greenable {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-position: inherit inherit;
+}
+
+.greenable img {
+    cursor: pointer;
+    transition: opacity 0.2s ease; /* Smooth opacity transition */
+}
+
+.greenable:hover img {
+    opacity: 0; 
+}
+
 /* magnifiable only on devices that support hover / have a mouse */
 @media (hover: hover) {
     .magnifiable:hover {
@@ -225,6 +244,7 @@ p {
 .smp {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .cards {
@@ -347,12 +367,13 @@ p {
     }
     .text-image-button {
         font-size: 15px !important; /* 13px */
-        width: 255px;
+        width: calc(33vw - 12vw); /* 100vw is full viewport width */
         margin-bottom: 10px !important;
         font-size:21px !important;
+        border: 6px solid var(--link);
     }
     .text-image-button span {
-        padding-left: 29px; /* Add spacing for text */
+        padding-left: 20px; /* Add spacing for text */
     }
     .text-image-button img {
         width:50px;
@@ -363,10 +384,21 @@ p {
     }
     .text-button {
         font-size: 25px !important; /* 15px */
-        width: 278.9px;
+        width: calc(25vw - 1.5vw); /* 100vw is full viewport width */
+        border: 6px solid var(--link);
     }
     .cards .card {
         flex: 1 1 48%; /* Change to 2 items per row for small screens */
+    }
+    .cards .card {
+        border: 6px solid var(--link); /* box around all content */
+    }
+    .cards .card .offsetHandler {
+        /* created so card text doesn't get forced into same padding */
+        padding: 0px 12px 0px 0px; /* offset from border */
+    }
+    .cards .card a img {
+        padding: 6px 6px 6px 6px;  /* border */
     }
     h1 {
         font-size: 50px !important; /* 35px */
