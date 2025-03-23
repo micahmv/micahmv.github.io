@@ -25,11 +25,44 @@ header {
     clear: both;
 }
 
+/* make certain elements larger for mobile */
+/* 768 should include phones and tablets */
+@media (max-width: 768px) {
+    .linked-apps a img {
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+    }
+    .linked-apps a {
+        text-decoration: none;
+    }
+    .text-image-button {
+        font-size: 15px !important; /* 13px */
+    }
+    .text-button {
+        font-size: 18px !important; /* 15px */
+    }
+    h1 {
+        font-size: 38px !important; /* 35px */
+    }
+    h3 {
+        font-size: 27px !important; /* 25px */
+    }
+    p {
+        font-size: 19px !important; /* 19 px */
+    }
+}
+
 .linked-apps {
     text-align: right;
     opacity: 100%;
+    text-decoration: none;
 }
-.linked-apps a {
+.linked-app-img {
+    width: 40px;
+    height:40px;
+}
+.linked-apps a img {
     text-decoration: none;
 }
 .linked-apps img:hover {
@@ -73,9 +106,10 @@ a:hover {
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    width: 128px;
+    width: 217.4px;
     margin-right:4px;
     text-align: center;
+    font-size: 14px;
 }
 .text-button:before {
     content: '';
@@ -115,6 +149,7 @@ a:hover {
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    font-size: 13px;
 }
 
 .text-image-button img {
@@ -150,11 +185,12 @@ a:hover {
     width: 100%; /* Expand icon background */
 }
 
-/* magnifiable only on devices that support hover / have a mouse */
 .magnifiable {
     cursor: zoom-in;
     transition: transform 0.133s;
 }
+
+/* magnifiable only on devices that support hover / have a mouse */
 @media (hover: hover) {
     .magnifiable:hover {
         transform: scale(2);
@@ -167,7 +203,6 @@ body {
 
     font-family: source-code-pro;
     font-weight: 400;
-    font-size: larger;
 
     max-width:900px;
     margin:10px auto;
@@ -176,7 +211,7 @@ body {
 
 h1 {
     color:#219880;
-    font-size: xx-large;
+    font-size: 32px;
     margin-top:0;
     margin-bottom: 0;
 }
@@ -184,11 +219,13 @@ h1 {
 h3 {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 23px;
 }
 
 p {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 19px;
 }
 
 ::-moz-selection { /* Code for Firefox */
