@@ -26,37 +26,6 @@ header {
     clear: both;
 }
 
-/* make certain elements larger for mobile */
-/* 768 should include phones and tablets */
-/* pointer:coarse? */
-@media (pointer:coarse) {
-    :root {
-        --transition-time: 0.25s;
-    }
-    .linked-apps a img {
-        width: 50px;
-        height: 50px;
-    }
-    .linked-apps a {
-        text-decoration: none;
-    }
-    .text-image-button {
-        font-size: 15px !important; /* 13px */
-    }
-    .text-button {
-        font-size: 18px !important; /* 15px */
-    }
-    h1 {
-        font-size: 38px !important; /* 35px */
-    }
-    h3 {
-        font-size: 27px !important; /* 25px */
-    }
-    p {
-        font-size: 19px !important; /* 19 px */
-    }
-}
-
 .linked-apps {
     text-align: right;
     opacity: 100%;
@@ -356,4 +325,56 @@ p {
 .screenshots img {
     max-width: 49%;
     max-height: 49%;
+}
+
+/* make certain elements larger for mobile */
+/* 768 should include phones and tablets */
+/* pointer:coarse? */
+@media (pointer:coarse) {
+    :root {
+        --transition-time: 0.25s;
+    }
+    body {
+        max-width: 97% !important;
+        margin:10px auto !important;
+    }
+    .linked-apps a img {
+        width: 60px;
+        height: 60px;
+    }
+    .linked-apps a {
+        text-decoration: none;
+    }
+    .text-image-button {
+        font-size: 15px !important; /* 13px */
+        width: 255px;
+        margin-bottom: 10px !important;
+        font-size:16px !important;
+    }
+    .text-image-button span {
+        padding-left: 44px; /* Add spacing for text */
+    }
+    .text-button {
+        font-size: 20px !important; /* 15px */
+        width: 278.9px;
+    }
+    .cards .card {
+        flex: 1 1 48%; /* Change to 2 items per row for small screens */
+    }
+    h1 {
+        font-size: 45px !important; /* 35px */
+    }
+    h3 {
+        font-size: 33px !important; /* 25px */
+    }
+    p {
+        font-size: 24px !important; /* 19 px */
+    }
+    #pfp {
+        padding-top: 13px !important;
+    }
+    img:active{
+        transition: transform 0.133s;
+        transform: scale(1.75); /* Scale the image when active */
+    }
 }
