@@ -339,8 +339,8 @@ p {
         margin:10px auto !important;
     }
     .linked-apps a img {
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
     }
     .linked-apps a {
         text-decoration: none;
@@ -349,30 +349,45 @@ p {
         font-size: 15px !important; /* 13px */
         width: 255px;
         margin-bottom: 10px !important;
-        font-size:16px !important;
+        font-size:21px !important;
     }
     .text-image-button span {
-        padding-left: 44px; /* Add spacing for text */
+        padding-left: 29px; /* Add spacing for text */
+    }
+    .text-image-button img {
+        width:50px;
+        height:auto;
+    }
+    .text-image-button:before {
+        width: 70px; /* Adjust icon background width */
     }
     .text-button {
-        font-size: 20px !important; /* 15px */
+        font-size: 25px !important; /* 15px */
         width: 278.9px;
     }
     .cards .card {
         flex: 1 1 48%; /* Change to 2 items per row for small screens */
     }
     h1 {
-        font-size: 45px !important; /* 35px */
+        font-size: 50px !important; /* 35px */
+    }
+    .header h3 {
+        font-size: 35px !important;
     }
     h3 {
-        font-size: 33px !important; /* 25px */
+        font-size: 35px !important; /* 25px */
     }
     p {
-        font-size: 24px !important; /* 19 px */
+        font-size: 28px !important; /* 19 px */
     }
     #pfp {
         padding-top: 13px !important;
     }
+    /* portfolio page text next to wpi photo */
+    #creation-driven p {
+        font-size: 25px !important;
+    }
+    /* scaling imgs */
     img:active{
         transition: transform 0.133s;
         transform: scale(1.75); /* Scale the image when active */
