@@ -202,7 +202,7 @@ a:hover {
 }
 
 /* magnifiable only on devices that support hover / have a mouse */
-@media (hover: hover) {
+@media (hover: none) {
     .magnifiable:hover {
         transform: scale(2);
     }
