@@ -461,6 +461,8 @@ p {
     }
     .itch {
         width: 220px !important;
+        display: block; /* Ensures width applies */
+        max-width: 220px !important;
     }
     #app-columns {
         gap: 0px !important;
