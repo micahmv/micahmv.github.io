@@ -1,0 +1,477 @@
+:root{
+    --background:black;
+    --background-card:#101935;
+    --text:#b4b6b6;
+    --link:#2170b0;
+    --link-hover:#82a0d0;
+    --transition-time: 0.45s; /* 0.3s */
+}
+
+header { 
+    background: rgba(0,0,0,.8); 
+    color:#FFFFFF; 
+}
+
+.left-div {
+    float: left;
+}
+
+.right-div {
+    float: right;
+    margin-top: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.linked-apps {
+    text-align: right;
+    opacity: 100%;
+    text-decoration: none;
+}
+.linked-apps a {
+    text-decoration: none;
+}
+.linked-app-img {
+    width: 50px !important;
+    height: 50px !important;
+}
+.linked-apps a img {
+    text-decoration: none;
+}
+.linked-apps img:hover {
+    opacity: 80%;
+}
+
+navbar {
+    color:#b4b6b6;
+    background-color: black;
+
+    font-size: larger;
+
+    max-width:800px;
+    margin:25px auto;
+}
+
+a {
+    color:var(--link);
+    outline: none;
+}
+a:hover {
+    color: var(--link-hover);
+    outline: none;
+}
+
+/* all buttons transition time */
+.text-button,
+.text-button:before,
+.text-button:hover,
+.text-button:hover::before,
+.text-image-button,
+.text-image-button:before,
+.text-image-button:hover,
+.text-image-button:hover:before {
+    transition: all var(--transition-time) ease;
+}
+
+.buttons a {
+    text-decoration: none;
+    text-align: center;
+}
+.text-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 8px;
+    color: var(--text);
+    background: var(--background-card);
+    border: 4px solid var(--link);
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 16.9vw;
+    margin-right:4px;
+    text-align: center;
+    font-size: 14px;
+}
+.text-button:before {
+    content: '';
+    position: absolute;
+    top: 100%; /* Start below the button */
+    left: 0;
+    width: 100%; /* Full width of the button */
+    height: 100%; /* Full height of the button */
+    background-color: black;
+    z-index: 0; /* Place background below text */
+    transition: top var(--transition-time) ease; /* Animate the top position */
+}
+.text-button:hover::before {
+    top: 0; /* Move to the top of the button */
+}
+.text-button span {
+    position: relative;
+    z-index: 1; /* Ensure text is above background */
+}
+.text-button:hover {
+    background-color: var(--link-hover);
+    color: var(--link-hover); /* Change text color on hover */
+    text-decoration: underline;
+}
+
+.text-image-button {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 10px;
+    color: var(--text);
+    background: #0A3A30;
+    border: 4px solid var(--link);
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.text-image-button img {
+    z-index: 1; /* Ensure icon is above background */
+}
+
+.text-image-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Adjust icon background width */
+    height: 100%;
+    background-color: black;
+    z-index: 0; /* Place background below icon */
+}
+
+.text-image-button span {
+    position: relative;
+    z-index: 1; /* Ensure text is above background */
+    padding-left: 23px; /* Add spacing for text */
+}
+
+.text-image-button:hover {
+    background-color: var(--link-hover);
+    color: var(--link-hover); /* Change text color on hover */
+    text-decoration: underline;
+}
+
+.text-image-button:hover:before {
+    background-color: black; /* Change icon background on hover */
+    width: 100%; /* Expand icon background */
+}
+
+.magnifiable {
+    cursor: zoom-in;
+    transition: transform 0.133s;
+}
+
+.greenable {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: color;
+    background-position: inherit inherit;
+}
+
+.greenable img {
+    cursor: pointer;
+    transition: opacity 0.2s ease; /* Smooth opacity transition */
+}
+
+.greenable:hover img {
+    opacity: 0; 
+}
+
+/* magnifiable only on devices that support hover / have a mouse */
+@media (hover: hover) {
+    .magnifiable:hover {
+        transform: scale(2);
+    }
+}
+
+body {
+    color:#b4b6b6;
+    background-color: black;
+
+    font-family: source-code-pro;
+    font-weight: 400;
+
+    max-width:900px;
+    margin:10px auto;
+    transform:scale(1);
+}
+
+h1 {
+    color:var(--link);
+    font-size: 32px;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 23px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: var(--link);
+} 
+  
+::selection {
+    color: white;
+    background: var(--link);
+}
+
+.smp {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.cards {
+    /* uncomment below to have boxes shorten for image size */
+    /* align-items: center; */
+    text-align: center;
+    display: flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top: 5px;
+}
+.cards .card {
+    border: 4px solid var(--link); /* box around all content */
+    flex: 300px;
+}
+.cards .card .offsetHandler {
+    /* created so card text doesn't get forced into same padding */
+    padding: 0px 8px 0px 0px; /* offset from border */
+}
+.cards .card a img {
+    background-color: var(--link-hover);
+    padding: 4px 4px 4px 4px;  /* border */
+    max-height:100%; 
+    max-width:100%;
+    opacity: 100%;
+}
+.cards .card img:hover {
+    opacity: 80%;
+}
+.cards .card h3 {
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+}
+.cards .card p {
+    margin: 0px 10px 0.8em 10px;
+}
+
+.main p {
+    margin-top:0px;
+    margin-bottom: 0px;
+}
+.columns {
+    display: flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+.columnsNoGap {
+    display: flex;
+    flex-wrap:wrap;
+    gap:0px;
+}
+.columns .col {
+    max-width: 25%;
+    max-height: 25%;
+}
+.columnsNoGap .col {
+    max-width: 25%;
+    max-height: 25%;
+}
+.columnsNoGap .col img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.columns .colx2 {
+    max-width: 45%;
+    max-height: 45%;
+}
+.columns .colx3 {
+    max-width: 72%;
+    max-height: 72%;
+}
+.columns .colx4 {
+    max-width: 25%;
+    max-height: 25%;
+}
+.columns .col a {
+    text-decoration: none;
+}
+.columns .col img {
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 100%;
+}
+.columns .col img:hover {
+    opacity: 80%;
+}
+.columns .colx2 img {
+    max-width: 115%;
+    max-height: 115%;
+}
+.columns .colx3 img {
+    max-width: 72%;
+    max-height: 72%;
+}
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.screenshots img {
+    max-width: 49%;
+    max-height: 49%;
+}
+
+.aboutText {
+    margin-top: 25px;
+}
+
+/* make certain elements larger for mobile */
+/* 768 should include phones and tablets */
+/* pointer:coarse? */
+@media (pointer:coarse) {
+    :root {
+        --transition-time: 0.25s;
+    }
+    body {
+        max-width: 97% !important;
+        margin:10px auto !important;
+    }
+    .linked-apps a img {
+        width: 65px;
+        height: 65px;
+    }
+    .linked-apps a {
+        text-decoration: none;
+    }
+    .text-image-button {
+        font-size: 15px !important; /* 13px */
+        width: calc(33vw - 12vw); /* 100vw is full viewport width */
+        height: 90px;
+        margin-bottom: 10px !important;
+        font-size:19px !important;
+        border: 6px solid var(--link);
+    }
+    .text-image-button span {
+        padding-left: 20px; /* Add spacing for text */
+        margin-left: 5px;
+    }
+    .text-image-button img {
+        width:50px;
+        height:auto;
+    }
+    .text-image-button:before {
+        width: 65px; /* Adjust icon background width */
+    }
+    .text-button {
+        font-size: 25px !important; /* 15px */
+        width: calc(((100vw - (4px * 4)) / 4) - 11px);
+        height: auto;
+        border: 6px solid var(--link);
+    }
+    .cards .card {
+        /* flex: 1 1 48%; /* Change to 2 items per row for small screens */
+    }
+    .cards .card {
+        border: 6px solid var(--link); /* box around all content */
+    }
+    .cards .card .offsetHandler {
+        /* created so card text doesn't get forced into same padding */
+        padding: 0px 12px 0px 0px; /* offset from border */
+    }
+    .cards .card a img {
+        padding: 6px 6px 6px 6px;  /* border */
+    }
+    h1 {
+        font-size: 50px !important; /* 35px */
+    }
+    .header h3 {
+        font-size: 35px !important;
+    }
+    h3 {
+        font-size: 35px !important; /* 25px */
+    }
+    p {
+        font-size: 28px !important; /* 19 px */
+    }
+    #pfp {
+        padding-top: 13px !important;
+    }
+    /* portfolio page text next to wpi photo */
+    #creation-driven p {
+        font-size: 22px !important;
+    }
+    /* scaling imgs */
+    img:active{
+        transition: transform 0.133s;
+        transform: scale(1.75); /* Scale the image when active */
+    }
+
+    .cards .card a h3 {
+        font-size: 34px !important; /* 25px */
+    }
+    .cards .card p {
+        font-size: 35px !important; /* 32 */
+        scale: 80%; /* 85 */
+        text-align: left;
+    }
+    .main p {
+        font-size: 12.5px !important;
+    }
+    .main .aboutText p {
+        font-size: 30px !important;
+    }
+
+    .portfolio-grouping {
+        font-size: 50px !important;
+    }
+
+    .smp h3 a {
+        font-size: 30px !important;
+    }
+    .smp h3 {
+        font-size: 30px !important;
+    }
+    .firstline {
+        font-size: 40px !important;
+    }
+    .pfp {
+        padding-top: 15px !important;
+    }
+    .itch {
+        width: 220px !important;
+        display: block; /* Ensures width applies */
+        max-width: 220px !important;
+    }
+    #app-columns {
+        gap: 0px !important;
+    }
+}

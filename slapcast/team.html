@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SLAPCAST</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="sc_style.css">
+        <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+        <script>
+            var pfps_mv = ["pfp_mv_sketch.png", "pfp_mv_professional.png", "pfp_mv_pixel.png", "pfp_mv_drawn.png"];
+            var pfps_ew = ["pfp_ethan.png", "pfp_ethan2.png"];
+            var pfps_hg = ["pfp_hayden.png", "pfp_hayden2.png", "pfp_hayden3.png", "pfp_hayden4.png", "pfp_hayden5.png", "pfp_hayden6.png", "pfp_hayden7.png"];
+        
+            function randPFP(id, pfps) {
+                var rand = Math.floor(Math.random() * pfps.length);
+                document.getElementById(id).src = "sc_assets/" + pfps[rand];
+            }
+        
+            window.onload = function() {
+                randPFP("pfp_mv", pfps_mv);
+                randPFP("pfp_ew", pfps_ew);
+                randPFP("pfp_hg", pfps_hg);
+            };
+        </script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="left-div">
+				<h1>PROJECT SAMSARA</h1>
+				<h3>TEAM SLAPCAST</h3>
+			</div>
+			<div class="right-div">
+				<div class="linked-apps">
+					<a href="https://h4c1m.itch.io/chakracaster" target="_new">
+						<img src="../assets/itch-logo.png" alt width="40" height="40" title="Itch Logo">
+					</a>
+                    <a href="" target="_new">
+						<img src="../assets/steam-logo.png" alt width=40 height=40 title="Steam Logo">
+					</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<div class="buttons">
+				<a href="index.html">
+					<button class="text-button">
+						<span>GAME</span>
+					</button>
+				</a>
+				<a href="weeklys.html">
+					<button class="text-button">
+						<span>WEEKLYS</span>
+					</button>
+				</a>
+				<a href="team.html">
+					<button class="text-button" style="background-color: black; color: var(--link); text-decoration: none; cursor: default;">
+						<span>TEAM</span>
+					</button>
+				</a>
+			</div>
+			<hr>
+		</div>
+		<div class="main">
+            <div class="columns">
+                <div class="col">
+                    <img class="icon" id="pfp_mv" src="../assets/pfp_blackout.png" alt="Micah Vargas" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText">
+                    <br>
+                    <h3 class="firstline">Micah Vargas</h3>
+					<a href="https://micahvargas.com" target="_new">micahvargas.com</a><br>
+					<a href="mailto:micahvargas@icloud.com" target="_new">micahvargas@icloud.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Roles:<br>
+                        Systems Developer<br>
+                        & Content Developer
+                    </p>
+                </div>
+				<div class="col">
+                    <img class="icon" id="pfp_ew" src="../assets/pfp_blackout.png" alt="Ethan Wilson" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText">
+                    <br>
+                    <h3 class="firstline">Ethan Wilson</h3>
+					<a href="https://ejwilson27.wixsite.com/website" target="_new">Ethan's Portfolio</a><br>
+					<a href="mailto:ethanwilson6693@gmail.com" target="_new">ethanwilson6693@gmail.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Role:<br>
+                        Character Artist<br>
+                    </p>
+                </div>
+				<div class="col">
+                    <img class="icon" id="pfp" src="sc_assets/pfp_nate.png" alt="Nate Westfall" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText" style="margin-right: 20px;">
+                    <br>
+                    <h3 class="firstline">Nate Westfall</h3>
+					<a href="mailto:nateguana@gmail.com" target="_new">nateguana@gmail.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Role:<br>
+                        Developer<br>
+                    </p>
+                </div>
+				<div class="col">
+                    <img class="icon" id="pfp" src="sc_assets/pfp_ali.png" alt="Ali Saeed" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText">
+                    <br>
+                    <h3 class="firstline">Ali Saeed</h3>
+					<a href="mailto:alisahirofficial@gmail.com" target="_new">alisahirofficial@gmail.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Roles:<br>
+                        Animator<br>
+                        & Audio Developer<br>
+                    </p>
+                </div>
+				<div class="col">
+                    <img class="icon" id="pfp" src="sc_assets/pfp_minyi.png" alt="Minyi Li" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText" style="margin-right: 30px;">
+                    <br>
+                    <h3 class="firstline">Minyi Li</h3>
+					<a href="mailto:cecillmy@gmail.com" target="_new">cecillmy@gmail.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Role:<br>
+                        Developer<br>
+                    </p>
+                </div>
+				<div class="col">
+                    <img class="icon" id="pfp_hg" src="sc_assets/pfp_blackout.png" alt="Hayden Glass" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText">
+                    <br>
+                    <h3 class="firstline">Hayden Glass</h3>
+					<a href="mailto:haydencantdraw@gmail.com" target="_new">haydencantdraw@gmail.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Role: <br>
+                        Environmental Artist<br>
+                    </p>
+                </div>
+				<div class="col">
+                    <img class="icon" id="pfp" src="sc_assets/pfp_elijah.png" alt="Elijah Rothschild" style="opacity: 100%; padding-top: 10px;">
+                </div>
+                <div class="colx3 aboutText">
+                    <br>
+                    <h3 class="firstline">Elijah Rothschild</h3>
+					<a href="mailto:earothschild@icloud.com" target="_new">earothschild@icloud.com</a>
+                    <p style="padding-bottom: 15px;">
+                        <br>
+                        Roles: <br>
+                        Content Developer<br>
+                        & Audio Developer<br>
+                    </p>
+                </div>
+            </div>
+        <br><br><br><br><br><br>
+    </body>
+</html>
