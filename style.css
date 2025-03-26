@@ -94,6 +94,7 @@ a:hover {
     font-weight: bold;
     text-transform: uppercase;
     width: calc(((100vw - (4px * 4)) / 4) - 30px);
+    max-width: 218px;
     margin-right:4px;
     text-align: center;
     font-size: 14px;
@@ -315,6 +316,10 @@ p {
 .columns .colx3 {
     max-width: 72%;
     max-height: 72%;
+}
+.columns .colx4 {
+    max-width: 25%;
+    max-height: 25%;
 }
 .columns .col a {
     text-decoration: none;
