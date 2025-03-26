@@ -432,8 +432,8 @@ p {
         font-size: 34px !important; /* 25px */
     }
     .cards .card p {
-        font-size: 16px !important;
-        scale: 90%;
+        font-size: 18px !important;
+        scale: 85%;
         text-align: left;
     }
     .main p {
@@ -458,5 +458,11 @@ p {
     }
     .pfp {
         padding-top: 15px !important;
+    }
+    .itch {
+        width: 220px !important;
+    }
+    #app-columns {
+        gap: 0px !important;
     }
 }
