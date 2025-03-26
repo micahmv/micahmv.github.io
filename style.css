@@ -432,8 +432,8 @@ p {
         font-size: 34px !important; /* 25px */
     }
     .cards .card p {
-        font-size: 32px !important;
-        scale: 85%;
+        font-size: 35px !important; /* 32 */
+        scale: 80%; /* 85 */
         text-align: left;
     }
     .main p {
