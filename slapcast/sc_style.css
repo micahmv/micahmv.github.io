@@ -92,7 +92,8 @@ a:hover {
     overflow: hidden;
     font-weight: bold;
     text-transform: uppercase;
-    width: 16.9vw;
+    width: calc(((100vw - (4px * 3)) / 3) - 30px);
+    max-width: 293px;
     margin-right:4px;
     text-align: center;
     font-size: 14px;
@@ -354,8 +355,15 @@ p {
     margin-top: 25px;
 }
 
+#pplOnDiffLines {
+    display: none;
+    content: "";
+}
+#roleOnSameLine {
+    display: block;
+}
+
 /* make certain elements larger for mobile */
-/* 768 should include phones and tablets */
 /* pointer:coarse? */
 @media (pointer:coarse) {
     :root {
@@ -397,19 +405,6 @@ p {
         height: auto;
         border: 6px solid var(--link);
     }
-    .cards .card {
-        /* flex: 1 1 48%; /* Change to 2 items per row for small screens */
-    }
-    .cards .card {
-        border: 6px solid var(--link); /* box around all content */
-    }
-    .cards .card .offsetHandler {
-        /* created so card text doesn't get forced into same padding */
-        padding: 0px 12px 0px 0px; /* offset from border */
-    }
-    .cards .card a img {
-        padding: 6px 6px 6px 6px;  /* border */
-    }
     h1 {
         font-size: 50px !important; /* 35px */
     }
@@ -422,42 +417,10 @@ p {
     p {
         font-size: 28px !important; /* 19 px */
     }
-    #pfp {
-        padding-top: 13px !important;
-    }
-    /* portfolio page text next to wpi photo */
-    #creation-driven p {
-        font-size: 22px !important;
-    }
-    /* scaling imgs */
-    img:active{
-        transition: transform 0.133s;
-        transform: scale(1.75); /* Scale the image when active */
-    }
-
-    .cards .card a h3 {
-        font-size: 34px !important; /* 25px */
-    }
-    .cards .card p {
-        font-size: 35px !important; /* 32 */
-        scale: 80%; /* 85 */
-        text-align: left;
-    }
-    .main p {
-        font-size: 12.5px !important;
+    a {
+        font-size: 28px;
     }
     .main .aboutText p {
-        font-size: 30px !important;
-    }
-
-    .portfolio-grouping {
-        font-size: 50px !important;
-    }
-
-    .smp h3 a {
-        font-size: 30px !important;
-    }
-    .smp h3 {
         font-size: 30px !important;
     }
     .firstline {
@@ -466,12 +429,13 @@ p {
     .pfp {
         padding-top: 15px !important;
     }
-    .itch {
-        width: 220px !important;
-        display: block; /* Ensures width applies */
-        max-width: 220px !important;
+    #pplOnDiffLines {
+        display: block;
     }
-    #app-columns {
-        gap: 0px !important;
+    #roleOnSameLine {
+        display: none;
+    }
+    .colx3 {
+        margin-right: 100px;
     }
 }
