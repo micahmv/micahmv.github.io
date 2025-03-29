@@ -427,6 +427,9 @@ p {
     #creation-driven p {
         font-size: 22px !important;
     }
+    #about-bios {
+        font-size: 26px !important;
+    }
     /* scaling imgs */
     img:active{
         transition: transform 0.133s;
@@ -469,7 +472,7 @@ p {
         display: block; /* Ensures width applies */
         max-width: 220px !important;
     }
-    #app-columns {
-        gap: 0px !important;
+    .ms_banner {
+        max-width: 472px !important;
     }
 }
