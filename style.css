@@ -430,6 +430,10 @@ p {
     #about-bios {
         font-size: 26px !important;
     }
+    /* spacing below Hello and Welcome to my website 1/3rd */
+    #mobile-spacing4-index {
+        padding-bottom: 20px !important;
+    }
     /* scaling imgs */
     img:active{
         transition: transform 0.133s;
