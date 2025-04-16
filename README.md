@@ -1,0 +1,1 @@
+The code (html, css, and js) for this project is all openly available for reuse and modification for other sites. However, DISCLAIMER: you may not use any text, images, videos, or any other content describing me & my work.
