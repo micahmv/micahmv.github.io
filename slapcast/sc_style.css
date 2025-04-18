@@ -1,8 +1,8 @@
 :root{
     --background:black;
-    --background-card:#101935;
+    --background-card:#5C2751;
     --text:#b4b6b6;
-    --link:#2170b0;
+    --link:#ff00ff;
     --link-hover:#82a0d0;
     --transition-time: 0.45s; /* 0.3s */
 }
