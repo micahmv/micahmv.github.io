@@ -421,6 +421,9 @@ p {
     p {
         font-size: 28px !important; /* 19 px */
     }
+    #cycle-font {
+        transition: font-family 0s ease-in-out;
+    }
     #pfp {
         padding-top: 13px !important;
     }

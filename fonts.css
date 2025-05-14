@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "boxy-bold";
+    src: url('assets/fonts/Boxy-Bold.woff2') format('woff2'),
+         url('assets/fonts/Boxy-Bold.woff') format('woff'),
+         url('assets/fonts/Boxy-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "blazter";
+    src: url('assets/fonts/BLAZTER.woff2') format('woff2'),
+         url('assets/fonts/BLAZTER.woff') format('woff'),
+         url('assets/fonts/BLAZTER.ttf') format('truetype'),
+         url('assets/fonts/BLAZTER.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'editundo';
+    src: url('assets/fonts/editundo.woff2') format('woff2'),    /* Modern browsers */
+         url('assets/fonts/editundo.woff') format('woff'),      /* Older browsers */
+         url('assets/fonts/editundo.ttf') format('truetype');   /* Very old browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'system-font';
+    src: url('assets/fonts/Friend or Foe Tall BB.woff2') format('woff2'),    /* Modern browsers */
+         url('assets/fonts/Friend or Foe Tall BB.woff') format('woff'),      /* Older browsers */
+         url('assets/fonts/Friend or Foe Tall BB.ttf') format('truetype');   /* Very old browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'dragonfly-font';
+    src: url('assets/fonts/df-font.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'joust';
+    src: url('assets/fonts/joust.woff2') format('woff2'),    /* Modern browsers */
+         url('assets/fonts/joust.ttf') format('truetype'),      /* Older browsers */
+         url('assets/fonts/Friend or Foe Tall BB.otf') format('opentype');   /* Very old browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'mono';
+    src: url('assets/fonts/mono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
