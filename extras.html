@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MICAH VARGAS</title>
+		<meta name = "type" content = "website"/>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="favicon.ico" sizes="16x16">
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// This function will randomize the link for the hovered element
+				function randLink(event) {
+					var clickedElement = event.target;
+					var links = JSON.parse(clickedElement.closest('.greenable').getAttribute("data-links"));
+					var rand = Math.floor(Math.random() * links.length);
+					var selectedLink = links[rand];
+
+					// Check if the first word is "portfolio" and prepend the domain if true
+					if (selectedLink.split("/")[0] === "portfolio") {
+						selectedLink = "https://micahvargas.com/" + selectedLink;
+					}
+
+					clickedElement.href = selectedLink; // Set the href of the anchor tag dynamically
+				}
+
+				// Add event listener to all .greenable divs that have anchor tags inside them
+				document.querySelectorAll(".greenable a").forEach(function(element) {
+					element.addEventListener("mouseenter", randLink); // On hover (hold), randomize link
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="left-div">
+				<h1>MICAH MATEO VARGAS</h1>
+				<h3>Game Developer</h3>
+			</div>
+			<div class="right-div">
+				<div class="linked-apps">
+					<a href="https://www.linkedin.com/in/micah-vargas-2b888a204/" target="_new">
+						<img src="assets/linkedin-logo.png" alt width=40 height=40 title="LinkedIn Profile">
+					</a>
+					<a href="https://h4c1m.itch.io/" target="_new">
+						<img src="assets/itch-logo.png" alt width="40" height="40" title="Itch Profile">
+					</a>
+					<a href="mailto:micahvargas@icloud.com" target="_new">
+						<img src="assets/mail-icon.png" alt width="40" height="40" title="Mail">
+					</a>
+					<a href="resume.pdf" target="_new">
+						<img src="assets/pdf-icon.png" alt width="40" height="40" title="Resume PDF">
+					</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="navbar">
+			<hr>
+			<div class="buttons">
+				<a href="index.html">
+					<button class="text-button">
+						<span>HOME</span>
+					</button>
+				</a>
+				<a href="portfolio.html">
+					<button class="text-button">
+						<span>PORTFOLIO</span>
+					</button>
+				</a>
+				<a href="resume.html">
+					<button class="text-button">
+						<span>RESUME</span>
+					</button>
+				</a>
+				<a href="about.html">
+					<button class="text-button">
+						<span>ABOUT</span>
+					</button>
+				</a>
+			</div>
+			<hr>
+		</div>
+        <h3 style="text-align: center;">Extras:</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0;">Web Minigames:</h3>
+            <h3 style="margin: 0;">Chao Garden:</h3>
+        </div>
+        <div class="columnsNoGap">
+            <div class="col">
+				<a href="perlengames/Dev3/game.html">
+                    <img class="icon" src="assets/ss_collect2.jpeg" alt="Maze using Primm's Algorithm in Perlenspiel">
+                </a>
+            </div>
+            <div class="col">
+				<a href="perlengames/Dev6/game.html">
+                    <img class="icon" src="assets/ss_maze.jpeg" alt="Maze using Primm's Algorithm in Perlenspiel">
+                </a>
+            </div>
+            <div class="col">
+                <a href="perlengames/Dev7/game.html">
+                    <img class="icon" src="assets/ss_wizard.png" alt="Wizard Game made in Perlenspiel">
+                </a>
+            </div>
+            <div class="col">
+                <div style="margin-left: 25px;" id="chao-webring"></div>
+                <script async
+                    src="https://chaogarden.netlify.app/widget/widget.js"
+                    data-webring="https://chaogarden.netlify.app/webring.json"
+                    data-site-url="https://micahvargas.com/">
+                </script>
+            </div>
+        </div>
+	<br>
+</body>
+</html>
