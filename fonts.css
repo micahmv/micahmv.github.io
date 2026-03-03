@@ -6,6 +6,11 @@
     font-weight: normal;
     font-style: normal;
   }
+
+.boxy-bold {
+  font-family: boxy-bold;
+  font-size: 35px;
+}
   
   @font-face {
     font-family: "blazter";
@@ -16,6 +21,11 @@
     font-weight: normal;
     font-style: normal;
   }
+
+.blazter {
+  font-family: blazter;
+  font-size: 40px;
+}
   
   @font-face {
     font-family: 'editundo';
@@ -25,6 +35,11 @@
     font-weight: normal;
     font-style: normal;
   }
+
+.editundo {
+  font-family: editundo;
+  font-size: 40px;
+}
   
   @font-face {
     font-family: 'system-font';
@@ -34,6 +49,12 @@
     font-weight: normal;
     font-style: normal;
   }
+
+.system-font {
+  font-family: system-font;
+  font-size: 40px;
+  margin-bottom: -1px;
+}
   
   @font-face {
     font-family: 'dragonfly-font';
@@ -41,6 +62,11 @@
     font-weight: normal;
     font-style: normal;
   }
+
+.dragonfly-font {
+  font-family: dragonfly-font;
+  font-size: 30px;
+}
 
   @font-face {
     font-family: 'joust';
@@ -50,6 +76,13 @@
     font-weight: normal;
     font-style: normal;
   }
+
+.joust {
+  font-family: joust;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
   
   @font-face {
     font-family: 'mono';
@@ -57,3 +90,27 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  /* make certain elements larger for mobile */
+/* Not working in here? */
+/* pointer:coarse? */
+@media (pointer:coarse) {
+    .boxy-bold {
+      font-size: 30px !important;
+    }
+    .blazter {
+      font-size: 40px !important;
+    }
+    .editundo {
+      font-size: 40px !important;
+    }
+    .system-font {
+      font-size: 40px !important;
+    }
+    .dragonfly-font {
+      font-size: 30px !important;
+    }
+    .joust {
+      font-size: 16px !important;
+    }
+}

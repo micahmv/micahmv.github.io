@@ -205,8 +205,14 @@ body {
     color:#b4b6b6;
     background-color: black;
 
-    font-family: source-code-pro;
+    font-family: serif;
     font-weight: 400;
+
+    /*
+    Potential font update:
+        font-family: sans-serif; 
+        font-weight: 200;
+    */
 
     max-width:900px;
     margin:10px auto;
